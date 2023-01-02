@@ -1,0 +1,27 @@
+<div id="edu"  class="educacion container-fluid ">
+    
+
+
+
+    <div class="titulo-parte">
+      <h2  class="titulo-div">Educación</h2>
+      <app-botoneditar></app-botoneditar>    
+    </div>
+  
+      <div class="row">
+        <div *ngFor="let educacion of educacionList" class="col-md-6 col-xl-3 my-3 ">
+            <div class="card">
+            <img class="card-img-top img-fluid centrador" [src]="educacion.imagLogo" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{educacion.tituloOb}}</h5>
+                <p class="card-text">{{educacion.textDesc}}<p><a [href]="educacion.linkSitio" target="_blank">{{educacion.descLinkSitio}}</a></p>
+                <div *ngIf="educacion.certificado">
+                  <a  [href]="educacion.certificado" class="btn btn-primary" >Certificado</a>
+                </div>
+               
+            </div>
+            </div>
+        </div>
+    
+    </div>
+  </div>

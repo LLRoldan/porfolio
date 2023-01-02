@@ -1,0 +1,16 @@
+<div id="hab" class="habilidades container-fluid">     
+    
+    <div class="titulo-parte">
+      <h2 class="titulo-div">Habilidades</h2>
+      <app-botoneditar></app-botoneditar>    
+  </div>
+    <div *ngFor="let habilidades of habilidadesList " class="container-fluid" >
+      
+      <div  class="row">
+        <p class="col-2" style="text-align:right;"> {{habilidades.habilidad}}</p>
+        <div class=" col-10">
+          <ngb-progressbar type="primary" textType="dark" [value]="habilidades.porcenta" [showValue]="true"></ngb-progressbar>
+        </div>
+      </div>
+    </div> 
+</div>

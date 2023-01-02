@@ -1,0 +1,74 @@
+{
+	"nombrePersona":"Leonardo Roldan",
+	"titulo":"Programador Full Stack Jr.",
+	"expertoEn":{
+	   "primero":"Programación Web",
+	   "segundo":"Bases de Datos",
+	   "tercero":"Apps"
+	},
+ 
+"educacion":[
+            {
+                "tituloOb":"Electrotécnico Nacional",
+                "imagLogo":"./assets/img/conet.jpg",
+                "textDesc":"Título secundario de Electrotécnico Nacional, otorgado por consejo nacional de educación técnica. Escuela ENET N°1 Dr. Nicolás Avellaneda - Santa Fe.",
+                "linkSitio":"",
+                "descLinkSitio":"",
+                "certificado":""
+            },
+            {
+                "tituloOb":"Analista en Informática Aplicada",
+                "imagLogo":"./assets/img/logo-universidad-nacional-del-litoral-argentina-UNL.gif",
+                "textDesc":"Título obtenido en Facultad de Ingeniería e Ciencias Hidricas de la UNL",
+                "linkSitio":"https://www.unl.edu.ar",
+                "descLinkSitio":"Universidad Nacional del Litoral",
+                "certificado":""
+            },
+            {
+                "tituloOb":"CCNA 1, 2 y 3",
+                "imagLogo":"./assets/img/cisco.jpg",
+                "textDesc":"Cisco Certified Network Associate. Routing and Switching Essentials.",
+                "linkSitio":"https://www.netacad.com/es/node/24137", 
+                "descLinkSitio":"Academia cisco UTN FRSF",
+                "certificado":""
+            },
+            {         
+                "tituloOb":"SeProgramar",
+                "imagLogo":"./assets/img/arg-programa.png",
+                "textDesc":"Primera etapa del programa Argentina Programa. Fundamentos de programación, JavaScript, Ruby Programación Orientada a objetos.",
+                "linkSitio":"https://www.argentina.gob.ar/economia/conocimiento/argentina-programa",
+                "descLinkSitio":"",
+                "certificado":"./assets/img/seprogramar.jpg"
+            },
+            {        
+                "tituloOb":"Diseño web",
+                "imagLogo":"./assets/img/800px-FreeCodeCamp_logo.png",
+                "textDesc":"Curso de Diseño Web Responsive",
+                "linkSitio":"https://www.freecodecamp.org", 
+                "descLinkSitio":"freecodecamp",
+                "certificado":"https://www.freecodecamp.org/certification/fcc512e0a93-8512-457d-88e3-bb01e88b3b25/responsive-web-design"
+            }
+            ],
+"habilidades":[
+{
+            "habilidad":"Inglés",
+            "porcenta":"80"
+},{
+            "habilidad":"CSS",
+            "porcenta":"60"
+},{
+            "habilidad":"HTLM5",
+            "porcenta":"80"
+},{
+            "habilidad":"JScript",
+            "porcenta":"50"
+},{
+            "habilidad":"POO",
+            "porcenta":"80"
+},{
+            "habilidad":"Redes",
+            "porcenta":"90"
+}
+]
+
+        }
