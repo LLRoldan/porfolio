@@ -21,6 +21,7 @@ import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-ses
 import { PadrePorfolioComponent } from './componentes/padre-porfolio/padre-porfolio.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule  } from '@angular/forms';
+import { EditEncabezadoComponent } from './componentes/edit-encabezado/edit-encabezado.component';
 
 
 
@@ -39,7 +40,7 @@ import { FormsModule  } from '@angular/forms';
     BotoneditarComponent,
     EditcontenidoComponent,
     IniciarSesionComponent, 
-    PadrePorfolioComponent
+    PadrePorfolioComponent, EditEncabezadoComponent
    
   
      ],

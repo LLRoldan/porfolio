@@ -1,9 +1,12 @@
-
-<div *ngIf="mostrarboton == true">
-
-<div class="btn-edit ">
-    <button type="button" class=" btn btn-primary btn-sm" onclik="cambiar_parrafo"><fa-icon [icon]="pencilIcon"></fa-icon></button>
-  </div>  
-
-
+<div class="row " *ngIf="mostrarboton == true">
+  <div class="btn-edit m-1 col-3 ">
+    <button type="button" class="btn btn-primary btn-sm">
+      <i class="fa fa-pencil" aria-hidden="true"></i>
+    </button>
   </div>
+  <div class="btn-danger m-1 col-3 ">
+    <button type="button" class="btn btn-danger btn-sm">
+      <i class="fa fa-trash" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>
