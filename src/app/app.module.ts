@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
-import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { TrabajosComponent } from './componentes/trabajos/trabajos.component';
@@ -21,7 +20,7 @@ import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-ses
 import { PadrePorfolioComponent } from './componentes/padre-porfolio/padre-porfolio.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule  } from '@angular/forms';
-import { EditEncabezadoComponent } from './componentes/edit-encabezado/edit-encabezado.component';
+import { EditEncabezadoComponent } from './componentes/edit/edit-encabezado/edit-encabezado.component';
 
 
 
@@ -30,7 +29,6 @@ import { EditEncabezadoComponent } from './componentes/edit-encabezado/edit-enca
     AppComponent,
     NavbarComponent,
     EncabezadoComponent,
-    EducacionComponent,
     ExperienciaComponent,
     HabilidadesComponent,
     TrabajosComponent,

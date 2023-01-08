@@ -1,6 +1,13 @@
 {
-	"nombrePersona":"Leonardo Roldan",
+	"nombrePersona":"Leonardo",
+	"apellidoPersona":"Roldan",
 	"titulo":"Programador Full Stack Jr.",
+	"domicilio":"Azopardo 6854",
+	"ubicacion":"Agentina - Santa Fe, CP3000",
+	"telefono":"3426105332",
+	"URLfacebook":"https://www.facebook.com/leitoroldan",
+	"URLinstagram":"https://www.instagram.com/leo.rockandroldan",
+	"URLlinkedin":"https://ar.linkedin.com/",
 	"expertoEn":{
 	   "primero":"Programación Web",
 	   "segundo":"Bases de Datos",
@@ -69,5 +76,46 @@
 				"habilidad":"Redes",
 				"porcenta":"90"
 	}
+	],
+	"experiencia":[{
+		"lugardetrabajo":"UNL",
+		"descripcion":"Ayudante de Laboratorio Informática",
+		"cargo":"Ayudante",
+		"periodo":"2000-2001",
+		"linkaempresa":"unl.edu.ar"
+	},
+	{
+		"lugardetrabajo":"kernet",
+		"descripcion":"Ventas y servicio técnico",
+		"cargo":"Vendedor",
+		"periodo":"2006-2020",
+		"linkaempresa":"kernet.com.ar"
+	},
+	{
+		"lugardetrabajo":"kernet",
+		"descripcion":"Redes y comunicaciones",
+		"cargo":"Networking",
+		"periodo":"2020-2023",
+		"linkaempresa":"kernet.com.ar"
+	}
+	],
+	"proyectos":[{
+		"linkcaptura":"https://cdn.pixabay.com/photo/2020/03/19/20/39/greenhouse-4948726_960_720.jpg",
+		"tituloproyecto":"ViveroApp",
+		"descripcion":"Aplicación vivero online",
+		"linkaproyecto":"google.com.ar"
+	},
+	{
+		"linkcaptura":"https://cloudfront-us-east-1.images.arcpublishing.com/artear/EDBZWSVI4JALHMFL7NLPOLIZDI.jpg",
+		"tituloproyecto":"Lista de tareas",
+		"descripcion":"Lista de tareas en angular del Argentina Programa",
+		"linkaproyecto":"https://github.com/LLRoldan/primerangular.git"
+	},
+	{
+		"linkcaptura":"https://cdn.pixabay.com/photo/2018/07/25/18/36/ecommerce-3562005_960_720.jpg",
+		"tituloproyecto":"Conectiva",
+		"descripcion":"Diseño e imprementacion de redes ",
+		"linkaproyecto":"google.com.ar"
+	}
 	]
- }
+}

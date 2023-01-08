@@ -14,6 +14,8 @@ export class EncabezadoComponent implements OnInit {
   miPorfolio:any;
   pencilIcon = faPen;
   element = false;
+  mostrarboton = true;
+  isLogged:boolean = true;
   constructor(private datosPorfolio:PorfolioService ) { }
 
   ngOnInit(): void{

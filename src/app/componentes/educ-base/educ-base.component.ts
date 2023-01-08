@@ -7,7 +7,7 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./educ-base.component.css']
 })
 export class EducBaseComponent implements OnInit {
-
+  isLogged:boolean = true;
     miPorfolio:any;
     pencilIcon = faPen;
     educacionList:any;

@@ -9,7 +9,7 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./habilidades.component.css']
 })
 export class HabilidadesComponent implements OnInit {
-
+  isLogged:boolean = true;
   miPorfolio:any;
   pencilIcon = faPen;
   habilidadesList:any;

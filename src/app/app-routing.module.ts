@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { PadrePorfolioComponent } from './componentes/padre-porfolio/padre-porfolio.component';
-import { EditEncabezadoComponent } from './componentes/edit-encabezado/edit-encabezado.component';
+import { EditEncabezadoComponent } from './componentes/edit/edit-encabezado/edit-encabezado.component';
 
 const routes: Routes = [
   {path: 'porfolio', component:PadrePorfolioComponent},
