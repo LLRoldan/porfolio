@@ -1,6 +1,7 @@
 import { Component, Directive, OnInit } from '@angular/core';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
+import { persona } from 'src/app/modelos/persona';
 
 
 @Component({
@@ -16,8 +17,11 @@ export class EncabezadoComponent implements OnInit {
   element = false;
   mostrarboton = true;
   isLogged:boolean = true;
+  persona: persona = new persona("","","","","","","","","","","","","","");
+
   constructor(private datosPorfolio:PorfolioService ) { }
 
+ 
   ngOnInit(): void{
     this.datosPorfolio.obtenerDatos().subscribe(data =>{
       //console.log(data);

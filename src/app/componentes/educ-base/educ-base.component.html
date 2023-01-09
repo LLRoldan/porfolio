@@ -1,23 +1,14 @@
 <div id="edu"  class="educacion container-fluid ">
     
-
-
-
     <div class="titulo-parte">
       <h2  class="titulo-div">Educación</h2>
       <div class="d-flex col-auto mt-2">
         <button type="submit" *ngIf="isLogged" class="btn btn-primary btn-sm" data-bs-toggle="modal" 
-        data-bs-target="#educacionModalAdd"><i class="fa fa-plus" aria-hidden="true"></i> Agregar</button>
+        data-bs-target="#educacionModalAdd" routerLink="/edit-educacion"><i class="fa fa-plus" aria-hidden="true"></i> Agregar</button>
         </div>
-        
-         
+              
     </div>
-   
-    
-  
-                  
-
-
+                   
 <div class="row">
         <div *ngFor="let educacion of educacionList" class="col-md-6 col-xl-3 my-3 ">
             <div class="card">
@@ -33,7 +24,7 @@
             </div>
             <div class="row " *ngIf="isLogged" >
               <div class="btn-edit m-2 col-1 " >
-                <button type="button" class="btn btn-primary btn-sm" routerLink="/edit-encabezado">
+                <button type="button" class="btn btn-primary btn-sm" routerLink="/edit-educacion">
                   <i class="fa fa-pencil" aria-hidden="true"></i>
                 </button>
               </div>

@@ -8,8 +8,8 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
 })
 export class EducBaseComponent implements OnInit {
   isLogged:boolean = true;
-    miPorfolio:any;
-    pencilIcon = faPen;
+   
+   
     educacionList:any;
     constructor(private datosPorfolio:PorfolioService ) { }
   

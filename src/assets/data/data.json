@@ -8,11 +8,12 @@
 	"URLfacebook":"https://www.facebook.com/leitoroldan",
 	"URLinstagram":"https://www.instagram.com/leo.rockandroldan",
 	"URLlinkedin":"https://ar.linkedin.com/",
-	"expertoEn":{
-	   "primero":"Programación Web",
-	   "segundo":"Bases de Datos",
-	   "tercero":"Apps"
-	},
+	"URLbaner":"./assets/img/code-screen_t.jpg",
+	"URLabatar":"https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Prescription02&hairColor=Black&facialHairType=BeardLight&facialHairColor=Platinum&clotheType=BlazerSweater&eyeType=Default&eyebrowType=FlatNatural&mouthType=Default&skinColor=Brown",
+	   "expertoEnprimero":"Programación Web",
+	   "expertoEnsegundo":"Bases de Datos",
+	   "expertoEntercero":"Apps",
+	
 
 "educacion":[
 	{

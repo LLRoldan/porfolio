@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
@@ -11,7 +10,7 @@ import { HabilidadesComponent } from './componentes/habilidades/habilidades.comp
 import { TrabajosComponent } from './componentes/trabajos/trabajos.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { CopyComponent } from './componentes/copy/copy.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { EducBaseComponent } from './componentes/educ-base/educ-base.component';
 import { BotoneditarComponent } from './componentes/botoneditar/botoneditar.component';
@@ -21,6 +20,11 @@ import { PadrePorfolioComponent } from './componentes/padre-porfolio/padre-porfo
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule  } from '@angular/forms';
 import { EditEncabezadoComponent } from './componentes/edit/edit-encabezado/edit-encabezado.component';
+import { EditEducacionComponent } from './componentes/edit/edit-educacion/edit-educacion.component';
+import { EditExperienciaComponent } from './componentes/edit/edit-experiencia/edit-experiencia.component';
+import { EditHabilidadesComponent } from './componentes/edit/edit-habilidades/edit-habilidades.component';
+import { EditTrabajosComponent } from './componentes/edit/edit-trabajos/edit-trabajos.component';
+import { RegistroComponent } from './componentes/registro/registro.component';
 
 
 
@@ -38,7 +42,7 @@ import { EditEncabezadoComponent } from './componentes/edit/edit-encabezado/edit
     BotoneditarComponent,
     EditcontenidoComponent,
     IniciarSesionComponent, 
-    PadrePorfolioComponent, EditEncabezadoComponent
+    PadrePorfolioComponent, EditEncabezadoComponent, EditEducacionComponent, EditExperienciaComponent, EditHabilidadesComponent, EditTrabajosComponent, RegistroComponent
    
   
      ],

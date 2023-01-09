@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class PorfolioService {
 
-/*
+/*para el json
 constructor() { }
 obtenerDatos(){console.log("El servicio profolio se esta ejecuntando")}
 
@@ -20,4 +20,15 @@ obtenerDatos(){console.log("El servicio profolio se esta ejecuntando")}
     
 
 }
+
+
+/* para la base de datos 
+constructor(private http:HttpClient) { }
+
+obtenerDatos():Observable<any>{
+  return this.http.get('http://localhost:8080/persona');
+  } 
+  
+
+}*/
 //aca se trabaja con aPi

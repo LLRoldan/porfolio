@@ -4,7 +4,7 @@
     <h2 class="titulo-div">Proyectos Realizados</h2>
     <div class="d-flex col-auto mt-2">
       <button type="submit" *ngIf="isLogged" class="btn btn-primary btn-sm" data-bs-toggle="modal" 
-      data-bs-target="#educacionModalAdd"><i class="fa fa-plus" aria-hidden="true"></i> Agregar</button>
+      data-bs-target="#educacionModalAdd" routerLink="/edit-trabajos"><i class="fa fa-plus" aria-hidden="true"></i> Agregar</button>
       </div>   
 </div>
 
@@ -25,7 +25,7 @@
         </div>
         <div class="row " *ngIf="isLogged" >
           <div class="btn-edit m-2 col-1 " >
-            <button type="button" class="btn btn-primary btn-sm" routerLink="/edit-encabezado">
+            <button type="button" class="btn btn-primary btn-sm" routerLink="/edit-trabajos">
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </div>

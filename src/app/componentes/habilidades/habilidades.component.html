@@ -4,7 +4,7 @@
       <h2 class="titulo-div">Habilidades</h2>
       <div class="d-flex col-auto mt-2">
         <button type="submit" *ngIf="isLogged" class="btn btn-primary btn-sm" data-bs-toggle="modal" 
-        data-bs-target="#educacionModalAdd"><i class="fa fa-plus" aria-hidden="true"></i> Agregar</button>
+        data-bs-target="#educacionModalAdd" routerLink="/edit-habilidades"><i class="fa fa-plus" aria-hidden="true"></i> Agregar</button>
         </div>    
   </div>
     <div *ngFor="let habilidades of habilidadesList " class="container-fluid" >
@@ -16,7 +16,7 @@
         </div>
         <div class="col-6 d-flex item-alling-end" *ngIf="isLogged" >
           <div class="btn-edit  " >
-            <button type="button" class="btn btn-primary btn-sm" routerLink="/edit-encabezado">
+            <button type="button" class="btn btn-primary btn-sm" routerLink="/edit-habilidades">
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </div>
