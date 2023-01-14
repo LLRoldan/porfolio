@@ -7,7 +7,7 @@ import { Educacion } from '../modelos/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
-  url:string= "https://portfolio-belacdown.koyeb.app/estudio/";
+  url:string= "http://localhost:8080/educacion/";
   constructor(private httpClient:HttpClient) { }
 
     public lista(): Observable<Educacion[]>{

@@ -31,5 +31,4 @@ export class IniciarSesionComponent implements OnInit {
         return this.form.get('password');
       }
 
-      
-}
+    }  

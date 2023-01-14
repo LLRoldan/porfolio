@@ -79,13 +79,15 @@
 	}
 	],
 	"experiencia":[{
+		"imagenilustra":"./assets/img/ejemplo.jpeg",
 		"lugardetrabajo":"UNL",
 		"descripcion":"Ayudante de Laboratorio Informática",
 		"cargo":"Ayudante",
 		"periodo":"2000-2001",
 		"linkaempresa":"unl.edu.ar"
 	},
-	{
+	{	
+		"imagenilustra":"./assets/img/ejemplo.jpeg",
 		"lugardetrabajo":"kernet",
 		"descripcion":"Ventas y servicio técnico",
 		"cargo":"Vendedor",
@@ -93,6 +95,7 @@
 		"linkaempresa":"kernet.com.ar"
 	},
 	{
+		"imagenilustra":"./assets/img/ejemplo.jpeg",
 		"lugardetrabajo":"kernet",
 		"descripcion":"Redes y comunicaciones",
 		"cargo":"Networking",

@@ -7,6 +7,6 @@ import { map } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-
+  url ="http://localhost:8080"
   constructor(private http:HttpClient) { }
 }

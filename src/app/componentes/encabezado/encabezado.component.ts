@@ -28,10 +28,5 @@ export class EncabezadoComponent implements OnInit {
       this.miPorfolio=data;
         });   
   }
-  showData() {
-    return (this.element = true);
-  }
-  hideData() {
-    return (this.element = false);
-  }
+ 
 }
