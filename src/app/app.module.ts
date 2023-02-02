@@ -25,6 +25,9 @@ import { EditExperienciaComponent } from './componentes/edit/edit-experiencia/ed
 import { EditHabilidadesComponent } from './componentes/edit/edit-habilidades/edit-habilidades.component';
 import { EditTrabajosComponent } from './componentes/edit/edit-trabajos/edit-trabajos.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
+import { PorfolioService } from './servicios/porfolio.service';
+import { InterceptorService } from './servicios/interceptor.service';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
 
@@ -58,7 +61,9 @@ import { RegistroComponent } from './componentes/registro/registro.component';
   exports: [ NavbarComponent,
    
   ],
-  providers: [],
+  providers: [/*PorfolioService,
+    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true},
+*/],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

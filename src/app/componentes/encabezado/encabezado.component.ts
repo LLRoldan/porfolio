@@ -12,12 +12,13 @@ import { persona } from 'src/app/modelos/persona';
 })
 
 export class EncabezadoComponent implements OnInit {
-  miPorfolio:any;
+  miPorfolioEnca:any;
   pencilIcon = faPen;
   element = false;
   mostrarboton = true;
   isLogged:boolean = true;
-  persona: persona = new persona("","","","","","","","","","","","","","");
+  persona: persona = new persona("",""
+  ,"","","","","","" ,"","","","","","","");
 
   constructor(private datosPorfolio:PorfolioService ) { }
 
@@ -25,7 +26,9 @@ export class EncabezadoComponent implements OnInit {
   ngOnInit(): void{
     this.datosPorfolio.obtenerDatos().subscribe(data =>{
       //console.log(data);
-      this.miPorfolio=data;
+      this.miPorfolioEnca=data;
+
+      // para tomar solo el primer registro this.miPorfolioEnca=data[0];
         });   
   }
  

@@ -9,13 +9,13 @@ import { persona } from '../modelos/persona';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL:string = "http://localhost:8080/persona/";
+  URL:string = "http://localhost:8080/";
 
   constructor(private http: HttpClient) { }
   
   //ver personas
   public lista(): Observable<persona[]>{
-    return this.http.get<persona[]>(this.URL + '/personas/ver');
+    return this.http.get<persona[]>(this.URL + 'lista');
   }
 
   //buscar una persona en especial por id
@@ -26,7 +26,7 @@ export class PersonaService {
   
   //crear nueva
   public save(perso: persona):Observable<any>{
-    return this.http.post<any>(this.URL + 'new', perso);
+    return this.http.post<any>(this.URL + 'persona/create/', perso);
     }
 
     //borrar

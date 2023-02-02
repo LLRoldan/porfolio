@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PorfolioService {
-
+  url:string ="http://localhost:8080/";
 /*para el json
 constructor() { }
 obtenerDatos(){console.log("El servicio profolio se esta ejecuntando")}
@@ -15,7 +15,7 @@ obtenerDatos(){console.log("El servicio profolio se esta ejecuntando")}
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{
-    return this.http.get('/assets/data/data.json ');
+    return this.http.get('./assets/data/data.json');
     } 
     
 
@@ -26,8 +26,8 @@ obtenerDatos(){console.log("El servicio profolio se esta ejecuntando")}
 constructor(private http:HttpClient) { }
 
 obtenerDatos():Observable<any>{
-  return this.http.get('http://localhost:8080/persona');
-  } 
+  return this.http.get<any>(this.url+"persona");
+ } 
   
 
 }*/

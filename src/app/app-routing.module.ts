@@ -7,9 +7,10 @@ import { EditEducacionComponent } from './componentes/edit/edit-educacion/edit-e
 import { EditExperienciaComponent } from './componentes/edit/edit-experiencia/edit-experiencia.component';
 import { EditHabilidadesComponent } from './componentes/edit/edit-habilidades/edit-habilidades.component';
 import { EditTrabajosComponent } from './componentes/edit/edit-trabajos/edit-trabajos.component';
+import { GuardGuard } from './servicios/guard.guard';
 
 const routes: Routes = [
-  {path: 'porfolio', component:PadrePorfolioComponent},
+  {path: 'porfolio', component:PadrePorfolioComponent,/* canActivate: [GuardGuard]*/},
   {path: 'iniciar-sesion', component:IniciarSesionComponent},
   {path: 'edit-encabezado', component:EditEncabezadoComponent},
   {path: 'edit-educacion', component:EditEducacionComponent},
