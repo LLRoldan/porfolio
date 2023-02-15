@@ -5,7 +5,7 @@ import { AuthService } from './auth.service';
 @Injectable({
   providedIn: 'root'
 })
-export class InterceptorService /*implements HttpInterceptor */{/*
+export class InterceptorService implements HttpInterceptor {
 
   constructor(private autenticacionServicio:AuthService) { }
 
@@ -21,5 +21,5 @@ export class InterceptorService /*implements HttpInterceptor */{/*
    console.log("El interceptor esta corriendo" + JSON.stringify(currentUser));
     return next.handle(req);
   }
-*/
+
 } 

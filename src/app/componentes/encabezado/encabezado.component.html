@@ -1,12 +1,12 @@
 <div class="imagen cad mat-card">
-    <img [src]="miPorfolioEnca.URLbaner" alt="fondo" class="fondo">
-    <img width="60" [src]="miPorfolioEnca.URLabatar" alt="retrato" class=" retrato">
+    <img [src]="miPorfolioEnca?.urlbaner" alt="fondo" class="fondo">
+    <img width="60" [src]="miPorfolioEnca?.urlabatar" alt="retrato" class=" retrato">
   </div>
      
 
       <article class="descripcion" style="padding-left: 16px;">
         <div class="titulo-parte">
-              <h1 id="nombreporfolio">{{miPorfolioEnca.nombrePersona}} {{miPorfolioEnca.apellidoPersona}}</h1>
+              <h1 id="nombreporfolio">{{miPorfolioEnca?.nombrePersona}} {{miPorfolioEnca?.apellidoPersona}}</h1>
               <div class="row " *ngIf="isLogged" >
                 <div class="btn-edit m-1 col-3 " >
                   <button type="button" class="btn btn-primary btn-sm" routerLink="/edit-encabezado">
@@ -21,14 +21,14 @@
               </div>  
         </div>
      
-       <h3>{{miPorfolioEnca.titulo}}</h3>
+       <h3>{{miPorfolioEnca?.titulo}}</h3>
       
         <div  class="row">
           <div class="col-xs-1 col-md-4 col-sm-12">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">{{miPorfolioEnca.expertoEnprimero}}</li>
-              <li class="list-group-item">{{miPorfolioEnca.expertoEnsegundo}}</li>
-              <li class="list-group-item">{{miPorfolioEnca.expertoEntercero}}</li>
+              <li class="list-group-item">{{miPorfolioEnca?.expertoEnprimero}}</li>
+              <li class="list-group-item">{{miPorfolioEnca?.expertoEnsegundo}}</li>
+              <li class="list-group-item">{{miPorfolioEnca?.expertoEntercero}}</li>
             </ul>
           </div>     
         </div>   

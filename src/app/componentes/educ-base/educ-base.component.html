@@ -6,18 +6,19 @@
         <button type="submit" *ngIf="isLogged" class="btn btn-primary btn-sm" data-bs-toggle="modal" 
         data-bs-target="#educacionModalAdd" routerLink="/edit-educacion"><i class="fa fa-plus" aria-hidden="true"></i> Agregar</button>
         </div>
-              
+     
     </div>
-                   
-<div class="row">
+
+
+<div class="row ">
         <div *ngFor="let educacion of educacionList" class="col-md-6 col-xl-3 my-3 ">
             <div class="card">
-            <img class="card-img-top img-fluid centrador" [src]="educacion.imagLogo" alt="Card image cap">
+            <img class="card-img-top img-fluid centrador" [src]="educacion.urlimagLogo" alt="Imagen de la educación">
             <div class="card-body">
-                <h5 class="card-title">{{educacion.tituloOb}}</h5>
-                <p class="card-text">{{educacion.textDesc}}<p><a [href]="educacion.linkSitio" target="_blank">{{educacion.descLinkSitio}}</a></p>
-                <div *ngIf="educacion.certificado">
-                  <a  [href]="educacion.certificado" class="btn btn-primary" >Certificado</a>
+                <h5 class="card-title">{{educacion.titulo}}</h5>
+                <p class="card-text">{{educacion.descripcion}}<p><a [href]="educacion.urllinkSitio" target="_blank">{{educacion.descLinkSitioOrg}}</a></p>
+                <div *ngIf="educacion.urlcertificado">
+                  <a  [href]="educacion.urlcertificado" class="btn btn-primary" >Certificado</a>
                 </div>
                
             </div>

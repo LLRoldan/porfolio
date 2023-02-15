@@ -5,24 +5,24 @@
             <div class="col-lg-6 mb-5 mb-lg-0">
                 <h4 class="text-uppercase mb-4">Encontrame</h4>
                 <p class="lead mb-0">
-                   {{miPorfolio.domicilio}}
+                   {{Porfoliofoot?.domicilio}}
                 <br>
-                    {{miPorfolio.ubicacion}}
+                    {{Porfoliofoot?.ubicacion}}
                     <br>
-                    Teléfono {{miPorfolio.telefono}}
+                    Teléfono {{Porfoliofoot?.telefono}}
                     <br>
-                    Email {{miPorfolio.email}}
+                    Email <a href="mailto:{{Porfoliofoot?.email}}"> {{Porfoliofoot?.email}}</a>
                 </p>
             </div>
             <!-- Footer Social Icons-->
             <div class="col-lg-6 mb-6 mb-lg-0 container-fluid">
                 <h4 class="text-uppercase mb-4">Seguime en redes sociales</h4>
-                <a class="circulito btn btn-outline-light btn-social mx-1 rounded-circle" [href]="miPorfolio.URLfacebook">
+                <a class="circulito btn btn-outline-light btn-social mx-1 rounded-circle" [href]="Porfoliofoot?.urlfacebook">
                     <i class="fa fa-facebook"></i></a>
-                <a class="circulito btn btn-outline-light btn-social mx-1 rounded-circle" [href]="miPorfolio.URLinstagram">
+                <a class="circulito btn btn-outline-light btn-social mx-1 rounded-circle" [href]="Porfoliofoot?.urlinstagram">
                     <!--<i class="fab fa-fw fa-instagram"></i>-->
                     <i class="fa fa-instagram"> </i></a>
-                <a class="circulito btn btn-outline-light btn-social mx-1 rounded-circle" [href]="miPorfolio.URLlinkedin">
+                <a class="circulito btn btn-outline-light btn-social mx-1 rounded-circle" [href]="Porfoliofoot?.urllinkedin">
                     <i class="fa fa-linkedin"></i></a>
                     
 

@@ -1,24 +1,26 @@
 export class Educacion {
 
     id?: number;
-        tituloOb : string;
-        textDesc : string;
-        imagLogo : string;
-        certificado: string;
-        descLinkSitio : string;
+        titulo : string;
+        descripcion : string;
+        urlimagLogo : string;
+        urlcertificado: string;
+        descLinkSitioOrg : string;
         personaid : number;
-    linkSitio: string;
+        urllinkSitio: string;
+        
 
-    constructor(tituloOb:string, textDesc:string, 
-        imagLogo:string, certificado:string, descLinkSitio:string, personaid : number, linkSitio: string) {
+    constructor(titulo:string, descripcion:string, 
+        urlimagLogo:string, urlcertificado:string, descLinkSitioOrg:string, personaid : number, urllinkSitio: string) {
 
-        this.tituloOb = tituloOb;
-        this.textDesc = textDesc;
-        this.imagLogo = imagLogo;
-        this.certificado = certificado;
-        this.descLinkSitio = descLinkSitio;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.urlimagLogo = urlimagLogo;
+        this.urlcertificado = urlcertificado;
+        this.descLinkSitioOrg = descLinkSitioOrg;
         this.personaid = personaid;
-        this.linkSitio =linkSitio;
+        this.urllinkSitio =urllinkSitio;
+       
     }
 }
 

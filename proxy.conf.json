@@ -1,0 +1,6 @@
+{
+    "/personaffff/*": {
+        "secure": false,
+        "changeOrigin": true
+       }
+}

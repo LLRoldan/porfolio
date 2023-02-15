@@ -16,6 +16,9 @@ export class persona {
   expertoEnprimero: string;
   expertoEnsegundo: string;
   expertoEntercero: string;
+  educacion: Array<any>;
+
+
 
   constructor(
     nombrePersona: string,
@@ -34,6 +37,8 @@ export class persona {
     expertoEnprimero: string,
     expertoEnsegundo: string,
     expertoEntercero: string,
+    educacion :  Array <any>
+ 
   ) {
     this.nombrePersona = nombrePersona;
     this.apellidoPersona = apellidoPersona;
@@ -51,5 +56,7 @@ export class persona {
     this.expertoEnprimero = expertoEnprimero;
     this.expertoEnsegundo = expertoEnsegundo;
     this.expertoEntercero = expertoEntercero;
+    this.educacion = educacion;
+    
 }
 }

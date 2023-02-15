@@ -7,7 +7,7 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class TrabajosComponent implements OnInit {
   isLogged:boolean = true;
-  trabajosList:any;
+  trabajosList:any[] = [];
  
   constructor(private datosPorfolio:PorfolioService ) { }
 

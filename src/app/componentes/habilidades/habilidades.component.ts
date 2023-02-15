@@ -10,7 +10,7 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
 })
 export class HabilidadesComponent implements OnInit {
   isLogged:boolean = true;
-  miPorfolio:any;
+  miPorfolio:any[] = [];
   pencilIcon = faPen;
   habilidadesList:any;
 

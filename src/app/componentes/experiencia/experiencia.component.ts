@@ -8,7 +8,7 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class ExperienciaComponent implements OnInit {
   isLogged:boolean = true;
-  experienciaList:any;
+  experienciaList:any[] = [];
   constructor(private datosPorfolio:PorfolioService ) { }
 
   ngOnInit(): void{

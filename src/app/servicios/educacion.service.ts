@@ -2,24 +2,26 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Educacion } from '../modelos/educacion';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EducacionService {
-  url:string= "http://localhost:8080/educacion/";
+ 
+  url = environment.baseUrl;
   constructor(private httpClient:HttpClient) { }
 
     public lista(): Observable<Educacion[]>{
-      return this.httpClient.get<Educacion[]>(this.url + 'lista');
+      return this.httpClient.get<Educacion[]>(this.url + 'educ/lista');
     }
 
     public listaPer(id: number): Observable<Educacion[]>{
-      return this.httpClient.get<Educacion[]>(this.url + `persona/${id}/lista`);
+      return this.httpClient.get<Educacion[]>(this.url + `educ/${id}/lista`);
     }
  
     public detail(id: number):Observable<Educacion>{
-    return this.httpClient.get<Educacion>(this.url + `detail/${id}`);
+    return this.httpClient.get<Educacion>(this.url + `educ/detail/${id}`);
     }
   
     public save(Eeduc: Educacion):Observable<any>{
