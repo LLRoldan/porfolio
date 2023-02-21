@@ -2,28 +2,28 @@
 <app-navbar></app-navbar>
 
 <div class="bootstrap-iso edit m-l-2">
-    <h2 class="m-3">Agregar educación recibida</h2>
+    <h2 class="m-3">Modificar educación recibida</h2>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12 center-content">
-                <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="form">
+                <form [formGroup]="form2" (ngSubmit)="onEnviar($event)" name="form">
                     <div class="form-group">
                         <label class="control-label" for="titulo"> Título </label>
-                        <input class="form-control" id="titulo" formControlName="titulo" type="text"
+                        <input class="form-control" id="titulo" formControlName="titulo" type="text" [(ngModel)]="educacionList.titulo"
                             placeholder="Título corto de educación" />
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label" for="urlimagenLogo">
+                        <label class="control-label" for="urlimagLogo">
                             URL imagen de estudio
                         </label>
-                        <input class="form-control" id="urlimagLogo" formControlName="urlimagLogo" type="text"
-                            placeholder="URL imagen de estudio o logo" />
+                        <input class="form-control" id="urlimagLogo" formControlName="urlimagLogo" type="text" [(ngModel)]="educacionList.urlimagLogo"
+                            placeholder="URL imagen de estudio o logo"  />
                     </div>
 
                     <div class="form-group">
                         <label class="control-label" for="descripcion"> Descripción </label>
-                        <input class="form-control" id="descripcion" formControlName="descripcion" type="text"
+                        <input class="form-control" id="descripcion" formControlName="descripcion" type="text" [(ngModel)]="educacionList.descripcion "
                             placeholder="Describa carrera, título o curso" />
                     </div>
 
@@ -31,7 +31,7 @@
                         <label class="control-label" for="urllinkSitio">
                             Link a lugar donde realizó la experiencia
                         </label>
-                        <input class="form-control" id="urllinkSitio" formControlName="urllinkSitio" type="text"
+                        <input class="form-control" id="urllinkSitio" formControlName="urllinkSitio" type="text" [(ngModel)]="educacionList.urllinkSitio "
                             placeholder="Link a página de organismo" />
                     </div>
 
@@ -39,14 +39,20 @@
                         <label class="control-label" for="desLinkSitioOrg">
                             Nombre corto del Link, donde realizó la experiencia
                         </label>
-                        <input class="form-control" id="desLinkSitioOrg" formControlName="descLinkSitioOrg" type="text"
+                        <input class="form-control" id="desLinkSitioOrg" formControlName="descLinkSitioOrg" type="text" [(ngModel)]="educacionList.descLinkSitioOrg "
                             placeholder="Link a página de organismo" />
                     </div>
 
                     <div class="form-group">
                         <label class="control-label" for="urlcertificado"> URL certificado </label>
-                        <input class="form-control" id="urlcertificado" formControlName="urlcertificado" type="text" placeholder="URL certificado" />
+                        <input class="form-control" id="urlcertificado" formControlName="urlcertificado" type="text" placeholder="URL certificado"  [(ngModel)]="educacionList.urlcertificado "/>
                     </div>
+
+                    <div class="form-group">
+                    
+                        <input class="form-control" id="idEducacion" formControlName="idEducacion" type="hidden" [(ngModel)]="educacionList.idEducacion"  />
+                    </div>
+
                    
                     <div class="form-group">
                         <div>

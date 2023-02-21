@@ -28,6 +28,8 @@ import { RegistroComponent } from './componentes/registro/registro.component';
 import { PorfolioService } from './servicios/porfolio.service';
 import { InterceptorService } from './servicios/interceptor.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ModificarEducacionComponent } from './modificar/modificar-educacion/modificar-educacion.component';
+import { ModificarEncabezadoComponent } from './modificar/modificar-encabezado/modificar-encabezado.component';
 
 
 
@@ -45,7 +47,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     BotoneditarComponent,
     EditcontenidoComponent,
     IniciarSesionComponent, 
-    PadrePorfolioComponent, EditEncabezadoComponent, EditEducacionComponent, EditExperienciaComponent, EditHabilidadesComponent, EditTrabajosComponent, RegistroComponent
+    PadrePorfolioComponent, EditEncabezadoComponent, EditEducacionComponent, EditExperienciaComponent, EditHabilidadesComponent, EditTrabajosComponent, RegistroComponent, ModificarEducacionComponent, ModificarEncabezadoComponent
    
   
      ],

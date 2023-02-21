@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Educacion } from 'src/app/modelos/educacion';
 import { EducacionService } from 'src/app/servicios/educacion.service';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
-import { TokenService } from 'src/app/servicios/token.service'
+import { TokenService } from 'src/app/servicios/token.service';
+
+
 
 @Component({
   selector: 'app-educ-base',
@@ -11,42 +12,39 @@ import { TokenService } from 'src/app/servicios/token.service'
 })
 export class EducBaseComponent implements OnInit {
   isLogged: boolean = true;
- 
-  // para json    constructor(private datosPorfolio:PorfolioService )  {}
-
-
-  constructor(private datosEduc: EducacionService, private tokenService: TokenService) { }
-  
   educacionList: Educacion[] = [];
-    
-  ngOnInit(): void {
-  
-    /*para json
-    this.datosPorfolio.obtenerDatos().subscribe(data =>{
-      console.log(data);
-      this.educacionList=data.educacion;
-        });   */
-
-
+  constructor(private datosEduc: EducacionService,
+     private tokenService: TokenService) { 
     this.cargarEduca();
-
-    if (this.tokenService.getToken()) {
-      console.log(' el token es:' , this.tokenService.getToken());
-      this.isLogged = true;
-    } else {
-      this.isLogged = false;
-    }
   }
-
   public cargarEduca():void {
     this.datosEduc.listaPer(6).subscribe(data =>
        { this.educacionList = data   ;
        console.log('lista de educaciones traída de api', data); 
-       console.log('lista de educaciones traída de api', this.educacionList);
       });
     }
+  ngOnInit(): void {
+      
+    if (this.tokenService.getToken()) {
+      console.log(' el token es:' , this.tokenService.getToken());
+      this.isLogged = true;
+    } else {
+      this.isLogged = true;//false con login
+    }
+  }
 
-
-
-}
-
+   onDeleteEdu(idEducacion: number){
+      console.log('id de educacion que quiero borrar' ,idEducacion);
+      if(confirm('Está seguro de borrar la edducación?')){
+        this.datosEduc.delete(idEducacion).subscribe({
+         next:  data => {
+              this.cargarEduca();
+          },
+          error:  err => {
+            this.cargarEduca();
+            alert("Educación borrada");
+            console.log('Error');
+          }
+      });
+      }
+}}

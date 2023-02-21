@@ -9,10 +9,11 @@
      
     </div>
 
-
+<div></div>
 <div class="row ">
-        <div *ngFor="let educacion of educacionList" class="col-md-6 col-xl-3 my-3 ">
-            <div class="card">
+        <div *ngFor="let educacion of educacionList" class="col-md-6 col-xl-3 my-3 " >
+
+          <div class="card">
             <img class="card-img-top img-fluid centrador" [src]="educacion.urlimagLogo" alt="Imagen de la educación">
             <div class="card-body">
                 <h5 class="card-title">{{educacion.titulo}}</h5>
@@ -25,12 +26,12 @@
             </div>
             <div class="row " *ngIf="isLogged" >
               <div class="btn-edit m-2 col-1 " >
-                <button type="button" class="btn btn-primary btn-sm" routerLink="/edit-educacion">
+                <button type="button" class="btn btn-primary btn-sm" routerLink="/modificar-educacion/{{educacion.idEducacion}}">
                   <i class="fa fa-pencil" aria-hidden="true"></i>
                 </button>
               </div>
               <div class="btn-danger m-2 col-1 ">
-                <button type="button" class="btn btn-danger btn-sm">
+                <button type="button" class="btn btn-danger btn-sm" (click)="onDeleteEdu(educacion.idEducacion)">
                   <i class="fa fa-trash" aria-hidden="true"></i>
                 </button>
               </div>

@@ -46,7 +46,7 @@ export class IniciarSesionComponent implements OnInit {
     }
   }
 
-  onLogin(event: Event): void{
+  onLogin(event: Event){
     
     event.preventDefault;
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
@@ -59,10 +59,7 @@ export class IniciarSesionComponent implements OnInit {
       this.tokenService.setToken(data.token);
       this.tokenService.setUsername(data.nombreUsuario);
       this.tokenService.setAuthorities(data.authorities);
-      this.roles = data.authorities; 
-
-
-      
+      this.roles = data.authorities;    
       this.ruta.navigate (['/porfolio']);
       //window.location.reload();
     }, err => {
@@ -76,7 +73,7 @@ export class IniciarSesionComponent implements OnInit {
   get Email(){
     return this.form.get('nombreUsuario');//email
       }
-      get Password(){
+  get Password(){
         return this.form.get('password');
       }
 

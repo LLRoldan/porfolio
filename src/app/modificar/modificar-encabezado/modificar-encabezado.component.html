@@ -5,43 +5,43 @@
 <app-navbar></app-navbar>
 
 <div class="bootstrap-iso edit m-l-2">
-  <h2 class="m-3">Perfil del usuario</h2>
+  <h2 class="m-3">Editar Perfil del usuario</h2>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-6 col-sm-6 col-xs-12 center-content">
-        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="encabezadoForm">
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="encabezadoForm" >
           <div class="form-group">
             <label class="control-label" for="nombre"> Nombre </label>
-            <input class="form-control" id="nombre" formControlName="nombre" type="text"
+            <input class="form-control" id="nombre" formControlName="nombre" type="text" [(ngModel)]="personaList.nombre"
               placeholder="Ingrese solo sus nombres" />
           </div>
         
           <div class="form-group">
             <label class="control-label"> Apellido </label>
-            <input class="form-control" id="apellido" formControlName="apellido" type="text"
+            <input class="form-control" id="apellido" formControlName="apellido" type="text" [(ngModel)]="personaList.apellido"
               placeholder="Ingrese su apellido" />
           </div>
         
           <div class="form-group">
             <label class="control-label" for="titulo"> Título </label>
-            <input class="form-control" id="titulo" formControlName="titulo" type="text" placeholder="Ingrese pofesión" />
+            <input class="form-control" id="titulo" formControlName="titulo" type="text" placeholder="Ingrese pofesión"  [(ngModel)]="personaList.titulo"/>
           </div>
         
           <div class="form-group">
             <label class="control-label" for="domicilio"> Domicilio </label>
-            <input class="form-control" id="domicilio" formControlName="domicilio" type="text"
+            <input class="form-control" id="domicilio" formControlName="domicilio" type="text" [(ngModel)]="personaList.domicilio "
               placeholder="Ingrese domicilio" />
           </div>
         
           <div class="form-group">
             <label class="control-label" for="ubicacion"> Ubicación </label>
-            <input class="form-control" id="ubicacion" formControlName="ubicacion" type="text"
+            <input class="form-control" id="ubicacion" formControlName="ubicacion" type="text" [(ngModel)]="personaList.ubicacion"
               placeholder="Ingrese pais y ciudad" />
           </div>
         
           <div class="form-group">
             <label class="control-label" for="telefono"> Teléfono </label>
-            <input class="form-control" id="telefono" formControlName="telefono" type="text" 
+            <input class="form-control" id="telefono" formControlName="telefono" type="text" [(ngModel)]="personaList.telefono"
             placeholder="Ingrese teléfono o whatsapp" />
           </div>
         
@@ -49,13 +49,13 @@
             <label class="control-label requiredField" for="email">
               Email
             </label>
-            <input class="form-control" id="email" formControlName="email" type="text"
+            <input class="form-control" id="email" formControlName="email" type="text" [(ngModel)]="personaList.email"
               placeholder="Ingrese correo electrónico" />
           </div>
         
           <div class="form-group">
             <label class="control-label" for="urlfacebook"> URL Facebook </label>
-            <input class="form-control" id="urlfacebook" formControlName="urlfacebook" type="text" 
+            <input class="form-control" id="urlfacebook" formControlName="urlfacebook" type="text"  [(ngModel)]="personaList.urlfacebook"
             placeholder="Ingrese URL de su facebook" />
           </div>
         
@@ -63,25 +63,25 @@
         
           <div class="form-group">
             <label class="control-label" for="urlinstagram"> URL Instagram </label>
-            <input class="form-control" id="urlinstagram" formControlName="urlinstagram" type="text"
+            <input class="form-control" id="urlinstagram" formControlName="urlinstagram" type="text" [(ngModel)]="personaList.urlinstagram"
               placeholder="Ingrese URL de su instagram" />
           </div>
         
           <div class="form-group">
             <label class="control-label" for="urllinkedin"> URL LinkedIn </label>
-            <input class="form-control" id="urllinkedin" formControlName="urllinkedin" type="text"
+            <input class="form-control" id="urllinkedin" formControlName="urllinkedin" type="text" [(ngModel)]="personaList.urllinkedin"
             placeholder="Ingrese URL de su Linkedin" />
           </div>
         
           <div class="form-group">
             <label class="control-label" for="urlbaner"> URL banner </label>
-            <input class="form-control" id="urlbaner" formControlName="urlbaner" type="text"
-              placeholder="Ingrese URL de imagen para baner" />
+            <input class="form-control" id="urlbaner" formControlName="urlbaner" type="text" [(ngModel)]="personaList.urlbaner"
+            placeholder="Ingrese URL de imagen para baner" />
           </div>
         
           <div class="form-group">
             <label class="control-label" for="urlabatar"> URL foto de perfil </label>
-            <input class="form-control" id="urlabatar" formControlName="urlabatar" type="text" 
+            <input class="form-control" id="urlabatar" formControlName="urlabatar" type="text" [(ngModel)]="personaList.urlabatar"
              placeholder="Ingrese URL de foto de perfil" />
           </div>
         
@@ -89,7 +89,7 @@
             <label class="control-label" for="expertoEnprimero">
               Especialidad principal
             </label>
-            <input class="form-control" id="expertoEnprimero" formControlName="expertoEnprimero" type="text"
+            <input class="form-control" id="expertoEnprimero" formControlName="expertoEnprimero" type="text" [(ngModel)]="personaList.expertoEnprimero"
               placeholder="Detalle su especialidad principal" />
           </div>
         
@@ -97,7 +97,7 @@
             <label class="control-label" for="expertoEnsegundo">
               Especialidad Secundaria
             </label>
-            <input class="form-control" id="expertoEnsegundo" formControlName="expertoEnsegundo" type="text"
+            <input class="form-control" id="expertoEnsegundo" formControlName="expertoEnsegundo" type="text" [(ngModel)]="personaList.expertoEnsegundo"
               placeholder="Detalle su especialidad secundaria" />
           </div>
         
@@ -105,13 +105,16 @@
             <label class="control-label" for="expertoEntercero">
               Especialidad Terciaria
             </label>
-            <input class="form-control" id="expertoEntercero" formControlName="expertoEntercero" type="text"
+            <input class="form-control" id="expertoEntercero" formControlName="expertoEntercero" type="text" [(ngModel)]="personaList.expertoEntercero"
               placeholder="Detalle su especialidad tercialia" />
           </div>
-        
+          <div class="form-group">
+                    
+            <input class="form-control" id="id" formControlName="id" type="hidden" [(ngModel)]="personaList.id"  />
+        </div>
           <div class="form-group">
             <div>
-              <button class="btn btn-primary" Name="submit" type="submit">
+              <button class="btn btn-primary" formControlName="submit" type="submit">
                 Guardar
               </button>
             </div>

@@ -1,6 +1,6 @@
 export class Educacion {
 
-    id?: number;
+    idEducacion: number;
         titulo : string;
         descripcion : string;
         urlimagLogo : string;
@@ -10,9 +10,9 @@ export class Educacion {
         urllinkSitio: string;
         
 
-    constructor(titulo:string, descripcion:string, 
+    constructor(idEducacion: number,titulo:string, descripcion:string, 
         urlimagLogo:string, urlcertificado:string, descLinkSitioOrg:string, personaid : number, urllinkSitio: string) {
-
+        this.idEducacion= idEducacion
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.urlimagLogo = urlimagLogo;

@@ -1,7 +1,7 @@
 export class persona {
   id?: number;
-  nombrePersona: string;
-  apellidoPersona: string;
+  nombre: string;
+  apellido: string;
   titulo: string;
   domicilio: string;
   ubicacion: string;
@@ -21,8 +21,9 @@ export class persona {
 
 
   constructor(
-    nombrePersona: string,
-    apellidoPersona: string,
+    id:number,
+    nombre: string,
+    apellido: string,
     titulo: string,
     domicilio: string,
     ubicacion: string,
@@ -40,8 +41,9 @@ export class persona {
     educacion :  Array <any>
  
   ) {
-    this.nombrePersona = nombrePersona;
-    this.apellidoPersona = apellidoPersona;
+    this.id = id;
+    this.nombre = nombre;
+    this.apellido = apellido;
     this.titulo = titulo;
     this.domicilio = domicilio;
     this.ubicacion = ubicacion;

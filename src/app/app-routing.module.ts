@@ -7,14 +7,18 @@ import { EditEducacionComponent } from './componentes/edit/edit-educacion/edit-e
 import { EditExperienciaComponent } from './componentes/edit/edit-experiencia/edit-experiencia.component';
 import { EditHabilidadesComponent } from './componentes/edit/edit-habilidades/edit-habilidades.component';
 import { EditTrabajosComponent } from './componentes/edit/edit-trabajos/edit-trabajos.component';
+import { ModificarEducacionComponent } from './modificar/modificar-educacion/modificar-educacion.component';
 
 import { GuardGuard } from './servicios/guard.guard';
+import { ModificarEncabezadoComponent } from './modificar/modificar-encabezado/modificar-encabezado.component';
 
 const routes: Routes = [
   {path: 'porfolio', component:PadrePorfolioComponent,/* canActivate: [GuardGuard]*/},
   {path: 'iniciar-sesion', component:IniciarSesionComponent},
   {path: 'edit-encabezado', component:EditEncabezadoComponent},
+  {path: 'modificar-encabezado/:id', component:ModificarEncabezadoComponent},
   {path: 'edit-educacion', component:EditEducacionComponent},
+  {path: 'modificar-educacion/:idEducacion', component:ModificarEducacionComponent},
   {path: 'edit-experiencia', component:EditExperienciaComponent},
   {path: 'edit-habilidades', component:EditHabilidadesComponent},
   {path: 'edit-trabajos', component:EditTrabajosComponent },

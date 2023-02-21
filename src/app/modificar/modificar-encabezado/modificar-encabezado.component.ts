@@ -1,27 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { persona } from 'src/app/modelos/persona';
 import { PersonaService } from 'src/app/servicios/persona.service';
 
-
-
 @Component({
-  selector: 'app-edit-encabezado',
-  templateUrl: './edit-encabezado.component.html',
-  styleUrls: ['./edit-encabezado.component.css']
+  selector: 'app-modificar-encabezado',
+  templateUrl: './modificar-encabezado.component.html',
+  styleUrls: ['./modificar-encabezado.component.css']
 })
-export class EditEncabezadoComponent implements OnInit {
+export class ModificarEncabezadoComponent implements OnInit {
 
   form: FormGroup;
-  //perso:persona;
+ personaList: any;
 
   constructor(private formBuilder: FormBuilder,
     private sPersona: PersonaService,
     private activatedRoute: ActivatedRoute,
     private router: Router
   ) {
-    //Creamos el grupo de controles para el formulario 
+this.cargarPersonaporid();
     this.form = this.formBuilder.group({
       id: [''],
       nombre: ['', [Validators.required]],
@@ -43,6 +40,17 @@ export class EditEncabezadoComponent implements OnInit {
    })
   }
 
+  private cargarPersonaporid() {
+    const id : number= this.activatedRoute.snapshot.params['id'];
+    console.log('persona a modificar................', id);
+    this.sPersona.detail(id).subscribe(data =>
+      
+       { this.personaList = data   ;
+             console.log('datos de persona traída de api a modificar', data); 
+       console.log('id de la persona traída de api, sola', id); 
+      });
+    }
+
   ngOnInit(): void {
 
     /*
@@ -55,7 +63,7 @@ export class EditEncabezadoComponent implements OnInit {
     }
     )*/
   }
-
+/*
   get Nombre() {
     return this.form.get("nombre");
   }
@@ -115,11 +123,11 @@ export class EditEncabezadoComponent implements OnInit {
   get Act3() {
     return this.form.get("expertoEntercero");
   }
-
+*/
 
   onCreate(): void {
     this.sPersona.save(this.form.value).subscribe(data => {
-      alert("Persona Añadida");
+      alert("Persona Modificada");
       window.location.reload();
     });
   }

@@ -1,38 +1,47 @@
 <div class="imagen cad mat-card">
-    <img [src]="miPorfolioEnca?.urlbaner" alt="fondo" class="fondo">
-    <img width="60" [src]="miPorfolioEnca?.urlabatar" alt="retrato" class=" retrato">
+  <img [src]="miPorfolioEnca?.urlbaner" alt="fondo" class="fondo" />
+  <img width="60" [src]="miPorfolioEnca?.urlabatar" alt="retrato" class="retrato" />
+</div>
+
+<article class="descripcion" style="padding-left: 16px">
+  <div class="titulo-parte">
+    <h1 id="nombreporfolio">
+      {{ miPorfolioEnca?.nombre }} {{ miPorfolioEnca?.apellido }}
+    </h1>
+    <div class="row" *ngIf="isLogged">
+      <div >
+      <button type="submit" class="btn btn-primary  btn-sm" data-bs-toggle="modal"
+        data-bs-target="#educacionModalAdd" routerLink="/edit-encabezado">
+        <i class="fa fa-plus" aria-hidden="true"></i> Agregar
+      </button>
+      </div>
+
+      <div class="btn-edit m-1 col-2">
+        <button type="button" class="btn btn-primary btn-sm" routerLink="/modificar-encabezado/{{miPorfolioEnca?.id}}">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="btn-danger m-1 col-2">
+        <button type="button" class="btn btn-danger btn-sm">
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
   </div>
-     
+ 
+                    
+    <div hidden id="id">{{miPorfolioEnca?.id}}</div>
 
-      <article class="descripcion" style="padding-left: 16px;">
-        <div class="titulo-parte">
-              <h1 id="nombreporfolio">{{miPorfolioEnca?.nombrePersona}} {{miPorfolioEnca?.apellidoPersona}}</h1>
-              <div class="row " *ngIf="isLogged" >
-                <div class="btn-edit m-1 col-3 " >
-                  <button type="button" class="btn btn-primary btn-sm" routerLink="/edit-encabezado">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                  </button>
-                </div>
-                <div class="btn-danger m-1 col-3 ">
-                  <button type="button" class="btn btn-danger btn-sm">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </button>
-                </div>
-              </div>  
-        </div>
-     
-       <h3>{{miPorfolioEnca?.titulo}}</h3>
-      
-        <div  class="row">
-          <div class="col-xs-1 col-md-4 col-sm-12">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">{{miPorfolioEnca?.expertoEnprimero}}</li>
-              <li class="list-group-item">{{miPorfolioEnca?.expertoEnsegundo}}</li>
-              <li class="list-group-item">{{miPorfolioEnca?.expertoEntercero}}</li>
-            </ul>
-          </div>     
-        </div>   
-      </article>
+  <h3>{{ miPorfolioEnca?.titulo }}</h3>
 
-
-  
+  <div class="row">
+    <div class="col-xs-1 col-md-4 col-sm-12">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{ miPorfolioEnca?.expertoEnprimero }}</li>
+        <li class="list-group-item">{{ miPorfolioEnca?.expertoEnsegundo }}</li>
+        <li class="list-group-item">{{ miPorfolioEnca?.expertoEntercero }}</li>
+      </ul>
+    </div>
+  </div>
+</article>
