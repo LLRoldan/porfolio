@@ -19,7 +19,7 @@ export class EducBaseComponent implements OnInit {
   }
   public cargarEduca():void {
     this.datosEduc.listaPer(6).subscribe(data =>
-       { this.educacionList = data   ;
+       { this.educacionList = data;
        console.log('lista de educaciones traída de api', data); 
       });
     }
@@ -47,4 +47,6 @@ export class EducBaseComponent implements OnInit {
           }
       });
       }
-}}
+}
+
+}

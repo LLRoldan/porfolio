@@ -7,33 +7,30 @@
       </div>   
 </div>
 
-
-  
-    
        <div class="row">
       <div *ngFor="let experiencia of experienciaList" class="col-md-6 col-xl-3 my-3">
-        <div class="card my-3 col-lg-3 col-md-4 col-sm-6 col-xs-12" style="width: 18rem;">
-          <img class="card-img-top" [src]="experiencia.imagenilustra" alt="Logo de empresa">
+        <div class="card my-3 col-lg-3 col-md-4 col-sm-6 col-xs-12" style="width: 18rem; background-color: lightgray; ">
+          <img class="card-img-top mg-fluid centrador" [src]="experiencia?.imagenilustra" alt="Logo de empresa">
           <div class="card-body">
-            <h5 class="card-title">{{experiencia.lugartrabajo }}</h5>
-            <p class="card-text">{{experiencia.descripcion}}</p>
+            <h5 class="card-title">{{experiencia?.lugardetrabajo}}</h5>
+            <p class="card-text">{{experiencia?.descripcion}}</p>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{experiencia.cargo}}</li>
-            <li class="list-group-item">{{experiencia.periodo}}</li>
+          <ul class="list-group list-group-flush"  >
+            <li class="list-group-item" style=" background-color: rgb(243, 237, 237);">{{experiencia?.cargo}}</li>
+            <li class="list-group-item" style=" background-color: lightgray;">{{experiencia?.periodo}}</li>
           </ul>
           <div class="card-body">
-            <a [href]="experiencia.linkaempresa" class="card-link">{{experiencia.linkaempresa}}</a>
+            <a [href]="experiencia?.linkaempresa" class="card-link">{{experiencia?.empresa}}</a>
           </div>
         </div>
         <div class="row " *ngIf="isLogged" >
           <div class="btn-edit m-2 col-1 " >
-            <button type="button" class="btn btn-primary btn-sm" routerLink="/edit-experiencia">
+            <button type="button" class="btn btn-primary btn-sm" routerLink="/modificar-experiencia/{{experiencia?.idExperiencia}}">
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </div>
           <div class="btn-danger m-2 col-1 ">
-            <button type="button" class="btn btn-danger btn-sm">
+            <button type="button" class="btn btn-danger btn-sm" (click)="onDeleteExp(experiencia.idExperiencia)">
               <i class="fa fa-trash" aria-hidden="true"></i>
             </button>
           </div>

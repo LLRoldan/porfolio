@@ -14,7 +14,7 @@ export class EncabezadoComponent implements OnInit {
   pencilIcon = faPen;
   element = false;
   mostrarboton = true;
-  isLogged:boolean = false;
+  isLogged:boolean = true;
   constructor(private datosPorfolio:PersonaService,
      private tokenService: TokenService) { 
       
@@ -29,6 +29,7 @@ export class EncabezadoComponent implements OnInit {
 
  
   ngOnInit(): void{
+ console.log('id del Perfil que quiero borrar',this.miPorfolioEnca.id);
  console.log("token traído: " + this.tokenService.getToken());
  console.log("variable isLogged : " + this.isLogged);
 
@@ -36,10 +37,24 @@ export class EncabezadoComponent implements OnInit {
     console.log(this.tokenService.getToken());
     this.isLogged = true;
   }else{
-    this.isLogged = true; //truen con login
+    this.isLogged = false; //truen con login
   } 
 }
 
-
+onDeletePerfil(id: number){
+  console.log('id del Perfil que quiero borrar',id);
+  if(confirm('Está seguro de borrar los datos del perfil?')){
+    this.datosPorfolio.delete(id).subscribe({
+     next:  data => {
+          this.cargarPersona();
+      },
+      error:  err => {
+        this.cargarPersona();
+        alert("Educación borrada");
+        console.log('Error');
+      }
+  });
+  }
+}
 
 }
