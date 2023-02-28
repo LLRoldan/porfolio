@@ -20,11 +20,11 @@ export class AuthService {
     
   }
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
-    return this.httpClient.post<any>(this.url + 'nuevo', nuevoUsuario);
+    return this.httpClient.post<any>(this.url + 'nuevo/', nuevoUsuario);
   }
 
   public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
-    return this.httpClient.post<JwtDto>(this.url + 'login', loginUsuario);
+    return this.httpClient.post<JwtDto>(this.url + 'login/', loginUsuario);
   }
 
 IniciarSesion(credenciales:any):Observable<any> {

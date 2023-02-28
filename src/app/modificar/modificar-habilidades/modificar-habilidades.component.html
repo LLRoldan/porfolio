@@ -11,16 +11,22 @@
       <label class="control-label " for="nombreHabilidad">
        Titulo de la habilidad
       </label>
-      <input class="form-control" id="nombreHabilidad" formControlName="nombreHabilidad" type="text" placeholder="Título corto de la habilidad adquirida"/>
+      <input class="form-control" id="nombreHabilidad" formControlName="nombreHabilidad" type="text"
+       placeholder="Título corto de la habilidad adquirida" [(ngModel)]="habilidadList.nombreHabilidad "/>
      </div>
 
      <div class="form-group ">
         <label class="control-label " for="nivel">
         Nivel
         </label>
-        <input class="form-control" id="nivel" formControlName="nivel" type="text"  placeholder="Nivel de habilidad en %"/>
+        <input class="form-control" id="nivel" formControlName="nivel" type="text"  placeholder="Nivel de habilidad en %" [(ngModel)]="habilidadList.nivel"/>
        </div>
           <div class="form-group">
+            <div class="form-group">
+                    
+                <input class="form-control" id="idHabilidad" formControlName="idHabilidad" type="hidden" [(ngModel)]="habilidadList.idHabilidad"  />
+            </div>
+
       <div>
        <button class="btn btn-primary " formControlName="submit" type="submit">
         Guardar

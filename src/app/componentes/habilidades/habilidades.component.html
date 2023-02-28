@@ -10,18 +10,18 @@
     <div *ngFor="let habilidades of habilidadesList " class="container-fluid" >
       
       <div  class="row">
-        <p class="col-2" style="text-align:right;"> {{habilidades.habilidad}}</p>
+        <p class="col-2" style="text-align:right;"> {{habilidades.nombreHabilidad}}</p>
         <div class="col-4">
-          <ngb-progressbar type="primary" textType="dark" [value]="habilidades.porcenta" [showValue]="true"></ngb-progressbar>
+          <ngb-progressbar type="primary" textType="dark" [value]="habilidades.nivel" [showValue]="true"></ngb-progressbar>
         </div>
         <div class="col-6 d-flex item-alling-end" *ngIf="isLogged" >
           <div class="btn-edit  " >
-            <button type="button" class="btn btn-primary btn-sm" routerLink="/edit-habilidades">
+            <button type="button" class="btn btn-primary btn-sm" routerLink="/modificar-habilidades/{{habilidades?.idHabilidad}}">
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </div>
           <div class="btn-danger mx-1">
-            <button type="button" class="btn btn-danger btn-sm">
+            <button type="button" class="btn btn-danger btn-sm" (click)="onDeleteExp(habilidades.idHabilidad)">
               <i class="fa fa-trash" aria-hidden="true"></i>
             </button>
           </div>

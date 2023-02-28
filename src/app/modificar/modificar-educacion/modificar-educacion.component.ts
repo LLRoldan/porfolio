@@ -20,7 +20,7 @@ export class ModificarEducacionComponent implements OnInit {
     private educacionModificada: EducacionService, 
     private tokenService: TokenService) { 
 
-    this.cargarEducaporid();
+
     
     this.form2 = this.formBuilder.group({
       idEducacion:[''],
@@ -47,6 +47,8 @@ export class ModificarEducacionComponent implements OnInit {
 
 
   ngOnInit(): void {
+   
+    this.cargarEducaporid();
       
     if (this.tokenService.getToken()) {
       console.log(' el token es:' , this.tokenService.getToken());

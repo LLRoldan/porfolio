@@ -20,7 +20,8 @@ export class IniciarSesionComponent implements OnInit {
   roles: string[] = [];
   errMsj!: string;
  
-  constructor(private formBuilder: FormBuilder,private tokenService: TokenService,
+  constructor(private formBuilder: FormBuilder,
+    private tokenService: TokenService,
      private authService: AuthService, 
       private ruta:Router) {
 
@@ -53,7 +54,8 @@ export class IniciarSesionComponent implements OnInit {
     this.authService.IniciarSesion  (this.form.value).subscribe(data =>{
       console.log("DATA: " + JSON.stringify(data));})
     
-    this.authService.login(this.loginUsuario).subscribe(data =>{
+    this.authService.login(this.loginUsuario)
+    .subscribe({next: data =>{
       this.isLogged = true;
       this.isLogginFail = false;
       this.tokenService.setToken(data.token);
@@ -62,12 +64,12 @@ export class IniciarSesionComponent implements OnInit {
       this.roles = data.authorities;    
       this.ruta.navigate (['/porfolio']);
       //window.location.reload();
-    }, err => {
+    }, error: err => {
       this.isLogged = false;
       this.isLogginFail = true;
       this.errMsj = err.error.mensaje;
       console.log(this.errMsj);
-    })
+  }});
   }
 
   get Email(){

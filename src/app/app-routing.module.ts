@@ -12,10 +12,14 @@ import { ModificarEducacionComponent } from './modificar/modificar-educacion/mod
 import { GuardGuard } from './servicios/guard.guard';
 import { ModificarEncabezadoComponent } from './modificar/modificar-encabezado/modificar-encabezado.component';
 import { ModificarExperienciaComponent } from './modificar/modificar-experiencia/modificar-experiencia.component';
+import { ModificarHabilidadesComponent } from './modificar/modificar-habilidades/modificar-habilidades.component';
+import { ModificarTrabajoComponent } from './modificar/modificar-trabajo/modificar-trabajo.component';
+import { RegistroComponent } from './componentes/registro/registro.component';
 
 const routes: Routes = [
   {path: 'porfolio', component:PadrePorfolioComponent,/* canActivate: [GuardGuard]*/},
-  {path: 'iniciar-sesion', component:IniciarSesionComponent},
+  {path: 'login', component:IniciarSesionComponent},
+  {path: 'registro', component:RegistroComponent},
   {path: 'edit-encabezado', component:EditEncabezadoComponent},
   {path: 'modificar-encabezado/:id', component:ModificarEncabezadoComponent},
   {path: 'edit-educacion', component:EditEducacionComponent},
@@ -23,9 +27,12 @@ const routes: Routes = [
   {path: 'edit-experiencia', component:EditExperienciaComponent},
   {path: 'modificar-experiencia/:idExperiencia', component:ModificarExperienciaComponent},
   {path: 'edit-habilidades', component:EditHabilidadesComponent},
+  {path: 'modificar-habilidades/:idHabilidad', component:ModificarHabilidadesComponent },
   {path: 'edit-trabajos', component:EditTrabajosComponent },
+  {path: 'modificar-trabajos/:idTrabajo', component:ModificarTrabajoComponent},
   
-   {path:'',redirectTo:'porfolio',pathMatch:'full'}
+  {path:'',redirectTo:'porfolio',pathMatch:'full'},
+  {path: 'home',component:PadrePorfolioComponent}
 ];
 
 @NgModule({

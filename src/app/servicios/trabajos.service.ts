@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Trabajos } from '../modelos/trabajos';
 
 @Injectable({
@@ -8,31 +9,31 @@ import { Trabajos } from '../modelos/trabajos';
 })
 export class TrabajosService {
 
-  url:string= "http://localhost:8080/trabajos/";
+  url = environment.baseUrl;
   constructor(private httpClient:HttpClient) { }
 
   public lista(): Observable<Trabajos[]>{
-    return this.httpClient.get<Trabajos[]>(this.url + 'lista');
+    return this.httpClient.get<Trabajos[]>(this.url + 'trabajo/lista');
   }
 
   public listaPer(id: number): Observable<Trabajos[]>{
-    return this.httpClient.get<Trabajos[]>(this.url + `persona/${id}/lista`);
+    return this.httpClient.get<Trabajos[]>(this.url + `trabajo/${id}/lista`);
   }
 
   public detail(id: number):Observable<Trabajos>{
-  return this.httpClient.get<Trabajos>(this.url + `detail/${id}`);  
+  return this.httpClient.get<Trabajos>(this.url + `trabajo/detail/${id}`);  
   }
 
-  public save(trabajo: Trabajos):Observable<any>{
-    return this.httpClient.post<any>(this.url + 'create', trabajo);
+  public guardar(trabajo: Trabajos):Observable<any>{
+    return this.httpClient.post<any>(this.url + 'trabajo/guardar', trabajo);
   }
  
   public delete(id: number):Observable<any>{
-    return this.httpClient.delete<any>(this.url + `delete/${id}`);
+    return this.httpClient.delete<any>(this.url + `trabajo/delete/${id}`);
     }
 
   public edit(trabajo: Trabajos):Observable<any>{
-    return this.httpClient.put<any>(this.url + 'update' ,trabajo );
+    return this.httpClient.put<any>(this.url + 'trabajo/guardar' ,trabajo );
     }
 
 }

@@ -2,6 +2,7 @@ import { Component,  OnInit } from '@angular/core';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 import { TokenService } from 'src/app/servicios/token.service'
 import { PersonaService } from 'src/app/servicios/persona.service';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-encabezado',
@@ -29,15 +30,14 @@ export class EncabezadoComponent implements OnInit {
 
  
   ngOnInit(): void{
- console.log('id del Perfil que quiero borrar',this.miPorfolioEnca.id);
- console.log("token traído: " + this.tokenService.getToken());
+  console.log("token traído: " + this.tokenService.getToken());
  console.log("variable isLogged : " + this.isLogged);
 
   if(this.tokenService.getToken()){
     console.log(this.tokenService.getToken());
     this.isLogged = true;
   }else{
-    this.isLogged = false; //truen con login
+    this.isLogged = true; //truen con login
   } 
 }
 

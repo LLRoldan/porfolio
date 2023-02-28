@@ -1,13 +1,14 @@
 export class Trabajos {
-    id?:number;
+    idTrabajos?:number;
     tituloproyecto:string;
     descripcion:string;
     linkcaptura:string;
     linkaproyecto:string;
     personaid:number;
 
-    constructor(tituloproyecto:string,  descripcion:string, 
+    constructor(idTrabajos: number, tituloproyecto:string,  descripcion:string, 
         linkcaptura:string, linkaproyecto:string, personaid:number) {
+        this.idTrabajos = idTrabajos;
         this.tituloproyecto = tituloproyecto;
         this.descripcion = descripcion;
         this.linkcaptura = linkcaptura;

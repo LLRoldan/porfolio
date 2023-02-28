@@ -25,12 +25,13 @@
         </div>
         <div class="row " *ngIf="isLogged" >
           <div class="btn-edit m-2 col-1 " >
-            <button type="button" class="btn btn-primary btn-sm" routerLink="/edit-trabajos">
+            <button type="button" class="btn btn-primary btn-sm" routerLink="/modificar-trabajos/{{trabajos?.idTrabajos}}">
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
           </div>
           <div class="btn-danger m-2 col-1 ">
-            <button type="button" class="btn btn-danger btn-sm">
+            <button type="button" class="btn btn-danger btn-sm"
+            (click)="onDeleteTrab(trabajos.idTrabajos)">
               <i class="fa fa-trash" aria-hidden="true"></i>
             </button>
           </div>

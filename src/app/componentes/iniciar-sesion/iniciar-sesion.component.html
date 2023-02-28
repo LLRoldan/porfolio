@@ -12,7 +12,7 @@
                 required  placeholder="Ingrese su usuario" 
                 [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 
                 'is-valid': !Email?.errors && Email?.touched}"
-
+                [(ngModel)]="nombreUsuario"
                 class="form-control" id="exampleInputEmail1" 
                 aria-describedby="emailHelp">
 
@@ -37,7 +37,7 @@
                 <input type="password" formControlName="password"  id="password" 
                 required 
                 
-                
+                [(ngModel)]="password"
                 
                 placeholder="Ingrese su contraseña" 
                 [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 

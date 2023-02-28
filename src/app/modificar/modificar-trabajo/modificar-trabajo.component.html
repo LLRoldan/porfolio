@@ -2,7 +2,7 @@
 <app-navbar></app-navbar>
 
 <div class="bootstrap-iso edit m-l-2 "  >
-  <h2 class="m-3"> Agregar tabajos y proyectos ralizados</h2>
+  <h2 class="m-3"> Modificar tabajos y proyectos ralizados</h2>
  <div class="container-fluid ">
   <div class="row">
    <div class="col-md-6 col-sm-6 col-xs-12 center-content">
@@ -11,20 +11,23 @@
             <label class="control-label " for="linkcaptura">
            URL imagen trabajo o proyecto
             </label>
-            <input class="form-control" id="linkcaptura" formControlName="linkcaptura" type="text" placeholder="URL imagen de captura de pantalla de trabajo "/>
+            <input class="form-control" id="linkcaptura" formControlName="linkcaptura" type="text"
+             placeholder="URL imagen de captura de pantalla de trabajo " [(ngModel)]="trabajosList.linkcaptura"/>
            </div>
      <div class="form-group ">
       <label class="control-label " for="tituloproyecto">
        Título o nombre
       </label>
-      <input class="form-control" id="tituloproyecto" formControlName="tituloproyecto" type="text" placeholder="Título corto del trabajo"/>
+      <input class="form-control" id="tituloproyecto" formControlName="tituloproyecto" type="text"
+       placeholder="Título corto del trabajo" [(ngModel)]="trabajosList.tituloproyecto"/>
      </div>
 
      <div class="form-group ">
         <label class="control-label " for="descripcion">
         Descripción
         </label>
-        <input class="form-control" id="descripcion" formControlName="descripcion" type="text"  placeholder="Describa carrera, título o curso"/>
+        <input class="form-control" id="descripcion" formControlName="descripcion" type="text"  
+        placeholder="Describa carrera, título o curso" [(ngModel)]="trabajosList.descripcion"/>
        </div>
 
 
@@ -32,8 +35,13 @@
         <label class="control-label " for="linkaproyecto">
         Link
         </label>
-        <input class="form-control" id="linkaproyecto" formControlName="linkaproyecto" type="text" placeholder="Link a web o github del trabajo"/>
+        <input class="form-control" id="linkaproyecto" formControlName="linkaproyecto" type="text"
+         placeholder="Link a web o github del trabajo" [(ngModel)]="trabajosList.linkaproyecto"/>
        </div>
+       <div class="form-group">
+                
+        <input class="form-control" id="idTrabajos" formControlName="idTrabajos" type="hidden" [(ngModel)]="trabajosList.idTrabajos"  />
+    </div>
        
           <div class="form-group">
       <div>

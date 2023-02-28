@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
+import { TokenService } from 'src/app/servicios/token.service';
+import { TrabajosService } from 'src/app/servicios/trabajos.service';
 @Component({
   selector: 'app-trabajos',
   templateUrl: './trabajos.component.html',
@@ -9,12 +11,38 @@ export class TrabajosComponent implements OnInit {
   isLogged:boolean = true;
   trabajosList:any[] = [];
  
-  constructor(private datosPorfolio:PorfolioService ) { }
+  constructor(private datosTrabajo:TrabajosService ,
+    private tokenService: TokenService ) {     this.cargarTrabajo();
+    }
+    public cargarTrabajo():void {
+      this.datosTrabajo.listaPer(6).subscribe(data =>
+         { this.trabajosList = data;
+         console.log('lista de trabajos traída de api', data); 
+        });
+      }
 
   ngOnInit(): void{
-    this.datosPorfolio.obtenerDatos().subscribe(data =>{
-      //console.log(data);
-      this.trabajosList=data.proyectos;
-        });   
+    if (this.tokenService.getToken()) {
+      console.log(' el token es:' , this.tokenService.getToken());
+      this.isLogged = true;
+    } else {
+      this.isLogged = true;//false con login
+    } 
   }
+
+  onDeleteTrab(idTrabajos: number){
+    console.log('id de trabajo que quiero borrar' ,idTrabajos);
+    if(confirm('Está seguro de borrar un trabajo realizado?')){
+      this.datosTrabajo.delete(idTrabajos).subscribe({
+       next:  data => {
+            this.cargarTrabajo();
+        },
+        error:  err => {
+          this.cargarTrabajo();
+          alert("Trabajo borrado");
+          console.log('Error');
+        }
+    });
+    }
+}
 }

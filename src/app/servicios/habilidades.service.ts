@@ -1,44 +1,45 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Habilidades } from '../modelos/habilidades';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HabilidadesService {
-  url: string= "http://localhost:8080/habilidades/";
+  url = environment.baseUrl;
   constructor(private httpClient:HttpClient) { }
 
 
   public lista(): Observable<Habilidades[]>{
     return this.httpClient.get<Habilidades[]>
-    (this.url + 'lista');
+    (this.url + 'habil/lista');
   }
 
   public listaPer(id: number): Observable<Habilidades[]>{
     return this.httpClient.get<Habilidades[]>
-    (this.url + `persona/${id}/lista`);
+    (this.url + `habil/${id}/lista`);
   }
 
   public detail(id: number):Observable<Habilidades>{
   return this.httpClient.get<Habilidades>
-  (this.url + `detail/${id}`);  
+  (this.url + `habil/detail/${id}`);  
   }
 
-  public save(Habilidades: Habilidades):Observable<any>{
+  public create(Habilidades: Habilidades):Observable<any>{
     return this.httpClient.post<any>
-    (this.url + 'create', Habilidades);
+    (this.url + 'habil/create', Habilidades);
     }
 
   public edit(Habilidades: Habilidades):Observable<any>{
       return this.httpClient.put<any>
-      (this.url + 'update', Habilidades);
+      (this.url + 'habil/update', Habilidades);
       }
 
   public delete(id: number):Observable<any>{
     return this.httpClient.delete<any>
-    (this.url + `delete/${id}`);
+    (this.url + `habil/delete/${id}`);
     }
 
 

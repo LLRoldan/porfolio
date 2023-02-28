@@ -31,6 +31,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ModificarEducacionComponent } from './modificar/modificar-educacion/modificar-educacion.component';
 import { ModificarEncabezadoComponent } from './modificar/modificar-encabezado/modificar-encabezado.component';
 import { ModificarExperienciaComponent } from './modificar/modificar-experiencia/modificar-experiencia.component';
+import { ModificarHabilidadesComponent } from './modificar/modificar-habilidades/modificar-habilidades.component';
+import { ModificarTrabajoComponent } from './modificar/modificar-trabajo/modificar-trabajo.component';
 
 
 
@@ -48,7 +50,7 @@ import { ModificarExperienciaComponent } from './modificar/modificar-experiencia
     BotoneditarComponent,
     EditcontenidoComponent,
     IniciarSesionComponent, 
-    PadrePorfolioComponent, EditEncabezadoComponent, EditEducacionComponent, EditExperienciaComponent, EditHabilidadesComponent, EditTrabajosComponent, RegistroComponent, ModificarEducacionComponent, ModificarEncabezadoComponent, ModificarExperienciaComponent
+    PadrePorfolioComponent, EditEncabezadoComponent, EditEducacionComponent, EditExperienciaComponent, EditHabilidadesComponent, EditTrabajosComponent, RegistroComponent, ModificarEducacionComponent, ModificarEncabezadoComponent, ModificarExperienciaComponent, ModificarHabilidadesComponent, ModificarTrabajoComponent
    
   
      ],
