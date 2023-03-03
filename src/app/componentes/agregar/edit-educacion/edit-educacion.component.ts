@@ -26,7 +26,7 @@ export class EditEducacionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+   
   }
 
  

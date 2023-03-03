@@ -12,32 +12,37 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class EncabezadoComponent implements OnInit {
   miPorfolioEnca:any;
-  pencilIcon = faPen;
+
   element = false;
   mostrarboton = true;
   isLogged:boolean = true;
   constructor(private datosPorfolio:PersonaService,
      private tokenService: TokenService) { 
-      
+      console.log('muetra encabezadossdfsdfsdfsin nada');
       this.cargarPersona();
     }
 
       public cargarPersona():void{
         this.datosPorfolio.detail(6).subscribe(edata => 
           {this.miPorfolioEnca = edata;
-            console.log('muetra encabezado', edata);});
+            console.log('muetra encabezado', edata);
+            console.log('muetra encabezadosin nada');
+          
+          });
            }
 
  
   ngOnInit(): void{
-  console.log("token traído: " + this.tokenService.getToken());
- console.log("variable isLogged : " + this.isLogged);
+  console.log("token traído mostrado en encabzado: " + this.tokenService.getToken());
+  console.log("variable isLogged : " + this.isLogged);
+
+  
 
   if(this.tokenService.getToken()){
     console.log(this.tokenService.getToken());
     this.isLogged = true;
   }else{
-    this.isLogged = true; //truen con login
+    this.isLogged = false; //truen con login
   } 
 }
 

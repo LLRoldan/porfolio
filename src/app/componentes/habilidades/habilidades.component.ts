@@ -11,7 +11,7 @@ import { HabilidadesService } from 'src/app/servicios/habilidades.service';
   styleUrls: ['./habilidades.component.css']
 })
 export class HabilidadesComponent implements OnInit {
-  isLogged:boolean = true;
+  isLogged:boolean = false;
   miPorfolio:any[] = [];
   pencilIcon = faPen;
   habilidadesList:any;
@@ -42,7 +42,7 @@ constructor(private datosHabil: HabilidadesService,
       console.log(' el token es:' , this.tokenService.getToken());
       this.isLogged = true;
     } else {
-      this.isLogged = true;//false con login
+      this.isLogged = false;
     }
   }
 

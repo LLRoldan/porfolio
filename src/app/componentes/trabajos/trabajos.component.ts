@@ -8,7 +8,7 @@ import { TrabajosService } from 'src/app/servicios/trabajos.service';
   styleUrls: ['./trabajos.component.css']
 })
 export class TrabajosComponent implements OnInit {
-  isLogged:boolean = true;
+  isLogged:boolean = false;
   trabajosList:any[] = [];
  
   constructor(private datosTrabajo:TrabajosService ,
@@ -26,7 +26,7 @@ export class TrabajosComponent implements OnInit {
       console.log(' el token es:' , this.tokenService.getToken());
       this.isLogged = true;
     } else {
-      this.isLogged = true;//false con login
+      this.isLogged = false;
     } 
   }
 

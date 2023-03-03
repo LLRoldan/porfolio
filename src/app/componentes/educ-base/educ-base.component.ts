@@ -11,11 +11,11 @@ import { TokenService } from 'src/app/servicios/token.service';
   styleUrls: ['./educ-base.component.css']
 })
 export class EducBaseComponent implements OnInit {
-  isLogged: boolean = true;
+  isLogged: boolean = false;
   educacionList: Educacion[] = [];
   constructor(private datosEduc: EducacionService,
      private tokenService: TokenService) { 
-    this.cargarEduca();
+    
   }
   public cargarEduca():void {
     this.datosEduc.listaPer(6).subscribe(data =>
@@ -24,12 +24,12 @@ export class EducBaseComponent implements OnInit {
       });
     }
   ngOnInit(): void {
-      
+    this.cargarEduca(); 
     if (this.tokenService.getToken()) {
-      console.log(' el token es:' , this.tokenService.getToken());
+      console.log(' el token de educcacion es:' , this.tokenService.getToken());
       this.isLogged = true;
     } else {
-      this.isLogged = true;//false con login
+      this.isLogged = false;//false con login
     }
   }
 

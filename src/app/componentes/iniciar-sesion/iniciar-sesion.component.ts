@@ -13,31 +13,30 @@ import { TokenService } from 'src/app/servicios/token.service';
 export class IniciarSesionComponent implements OnInit {
  form: FormGroup;
  isLogged = false;
-  isLogginFail = false;
-  loginUsuario!: LoginUsuario;
-  nombreUsuario!: string;
-  password!: string;
-  roles: string[] = [];
-  errMsj!: string;
+ isLogginFail = false;
+ loginUsuario!: LoginUsuario;
+ nombreUsuario!: string;
+ password!: string;
+ roles: string[] = [];
+ errMsj!: string;
  
   constructor(private formBuilder: FormBuilder,
-    private tokenService: TokenService,
-     private authService: AuthService, 
+      private tokenService: TokenService,
+      private authService: AuthService, 
       private ruta:Router) {
 
-                this.form=this.formBuilder.group(
-                  {   nombreUsuario:['',[Validators.required,Validators.email]],
-                      password:['',[Validators.required,Validators.minLength(8)]],
-                      /*deviceInfo:this.formBuilder.group({
-                        deviceId: ["7168738738"],
-                        deviceType: ["DEVIVE_TYPR_ANDROID"],
-                        notificationToken:["544656546546546"]
-                        
-                      })*/
-              })
+    this.form = this.formBuilder.group(
+      {
+        nombreUsuario: ['', [Validators.required, Validators.email]],
+        password: ['', [Validators.required, Validators.minLength(8)]],
+        /*deviceInfo:this.formBuilder.group({
+          deviceId: ["7168738738"],
+          deviceType: ["DEVIVE_TYPR_ANDROID"],
+          notificationToken:["544656546546546"]
+        })*/
+      })
 
   }
-
 
   ngOnInit(): void {
     if(this.tokenService.getToken()){
@@ -51,19 +50,22 @@ export class IniciarSesionComponent implements OnInit {
     
     event.preventDefault;
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
-    this.authService.IniciarSesion  (this.form.value).subscribe(data =>{
+    /*
+    this.authService.IniciarSesion(this.form.value).subscribe
+     (data =>{
       console.log("DATA: " + JSON.stringify(data));})
-    
+    */
     this.authService.login(this.loginUsuario)
     .subscribe({next: data =>{
       this.isLogged = true;
       this.isLogginFail = false;
+      
       this.tokenService.setToken(data.token);
       this.tokenService.setUsername(data.nombreUsuario);
       this.tokenService.setAuthorities(data.authorities);
       this.roles = data.authorities;    
       this.ruta.navigate (['/porfolio']);
-      //window.location.reload();
+     //window.location.reload();
     }, error: err => {
       this.isLogged = false;
       this.isLogginFail = true;

@@ -15,14 +15,16 @@ import { ModificarExperienciaComponent } from './modificar/modificar-experiencia
 import { ModificarHabilidadesComponent } from './modificar/modificar-habilidades/modificar-habilidades.component';
 import { ModificarTrabajoComponent } from './modificar/modificar-trabajo/modificar-trabajo.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
+import { EducBaseComponent } from './componentes/educ-base/educ-base.component';
 
 const routes: Routes = [
   {path: 'porfolio', component:PadrePorfolioComponent,/* canActivate: [GuardGuard]*/},
   {path: 'login', component:IniciarSesionComponent},
   {path: 'registro', component:RegistroComponent},
+  {path: 'educacion', component:EducBaseComponent },
   {path: 'edit-encabezado', component:EditEncabezadoComponent},
   {path: 'modificar-encabezado/:id', component:ModificarEncabezadoComponent},
-  {path: 'edit-educacion', component:EditEducacionComponent},
+  {path: 'edit-educacion', component:EditEducacionComponent, data: { expectedRol: ['admin', 'user'] }},
   {path: 'modificar-educacion/:idEducacion', component:ModificarEducacionComponent},
   {path: 'edit-experiencia', component:EditExperienciaComponent},
   {path: 'modificar-experiencia/:idExperiencia', component:ModificarExperienciaComponent},

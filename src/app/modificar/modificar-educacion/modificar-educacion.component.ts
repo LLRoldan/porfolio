@@ -49,12 +49,13 @@ export class ModificarEducacionComponent implements OnInit {
   ngOnInit(): void {
    
     this.cargarEducaporid();
+    
       
     if (this.tokenService.getToken()) {
       console.log(' el token es:' , this.tokenService.getToken());
       this.isLogged = true;
     } else {
-      this.isLogged = true;//false con login
+      this.isLogged = false;//false con login
     }
   }
 

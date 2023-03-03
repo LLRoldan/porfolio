@@ -21,7 +21,7 @@ export class ExperienciaComponent implements OnInit {
         });   
   }
 }*/
-isLogged: boolean = true;
+isLogged: boolean = false;
  experienciaList: Experiencia[] = [];
   constructor(private datosExper: ExperienciaService,
      private tokenService: TokenService) { 
@@ -39,7 +39,7 @@ isLogged: boolean = true;
       console.log(' el token es:' , this.tokenService.getToken());
       this.isLogged = true;
     } else {
-      this.isLogged = true;//false con login
+      this.isLogged = false;//false con login
     }
   }
 
