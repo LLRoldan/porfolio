@@ -1,11 +1,19 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
-
+/*
 export const environment = {
-  baseUrl: 'http://localhost:8080/',
-  production: false
+baseUrl: 'http://localhost:8080/',
+production: false
 };
+
+*/
+export const environment = {
+  baseUrl: 'https://backend-porfolio-h4mv.onrender.com/',
+production: false
+};
+
+
 
 /*
  * For easier debugging in development mode, you can import the following file

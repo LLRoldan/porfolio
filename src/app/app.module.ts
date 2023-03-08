@@ -33,6 +33,7 @@ import { ModificarEncabezadoComponent } from './modificar/modificar-encabezado/m
 import { ModificarExperienciaComponent } from './modificar/modificar-experiencia/modificar-experiencia.component';
 import { ModificarHabilidadesComponent } from './modificar/modificar-habilidades/modificar-habilidades.component';
 import { ModificarTrabajoComponent } from './modificar/modificar-trabajo/modificar-trabajo.component';
+;
 
 
 
@@ -50,7 +51,9 @@ import { ModificarTrabajoComponent } from './modificar/modificar-trabajo/modific
     BotoneditarComponent,
     EditcontenidoComponent,
     IniciarSesionComponent, 
-    PadrePorfolioComponent, EditEncabezadoComponent, EditEducacionComponent, EditExperienciaComponent, EditHabilidadesComponent, EditTrabajosComponent, RegistroComponent, ModificarEducacionComponent, ModificarEncabezadoComponent, ModificarExperienciaComponent, ModificarHabilidadesComponent, ModificarTrabajoComponent
+    PadrePorfolioComponent, EditEncabezadoComponent, EditEducacionComponent, EditExperienciaComponent, 
+    EditHabilidadesComponent, EditTrabajosComponent, RegistroComponent, ModificarEducacionComponent, ModificarEncabezadoComponent, 
+    ModificarExperienciaComponent, ModificarHabilidadesComponent, ModificarTrabajoComponent
    
   
      ],
@@ -66,9 +69,7 @@ import { ModificarTrabajoComponent } from './modificar/modificar-trabajo/modific
   exports: [ NavbarComponent,
    
   ],
-  providers: [/*PorfolioService,
-    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true},
-*/],
+  providers: [PorfolioService,{provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}],////linea agregada para Guards  VER!
   bootstrap: [AppComponent]
 })
 export class AppModule { }

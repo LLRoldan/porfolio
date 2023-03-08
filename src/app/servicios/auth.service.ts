@@ -5,12 +5,13 @@ import { map } from 'rxjs';
 import { NuevoUsuario } from '../modelos/nuevo-usuario';
 import { LoginUsuario } from '../modelos/login-usuario';
 import { JwtDto } from '../modelos/jwt-dto';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  url ="http://localhost:8080/auth/"
+   url = environment.baseUrl;
   currentUserSubject: BehaviorSubject<any>;
   constructor(private httpClient:HttpClient) {
 
@@ -20,11 +21,11 @@ export class AuthService {
     
   }
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
-    return this.httpClient.post<any>(this.url + 'nuevo/', nuevoUsuario);
+    return this.httpClient.post<any>(this.url + 'auth/nuevo/', nuevoUsuario);
   }
 
   public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
-    return this.httpClient.post<JwtDto>(this.url + 'login/', loginUsuario);
+    return this.httpClient.post<JwtDto>(this.url + 'auth/login/', loginUsuario);
   }
 
 IniciarSesion(credenciales:any):Observable<any> {
