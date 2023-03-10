@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { HabilidadesService } from 'src/app/servicios/habilidades.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { HabilidadesService } from 'src/app/servicios/habilidades.service';
 })
 export class EditHabilidadesComponent implements OnInit {
   form:FormGroup;
-  constructor(private formBuilder: FormBuilder, private habilidad: HabilidadesService) { 
+  constructor(private formBuilder: FormBuilder, private ruta: Router,private habilidad: HabilidadesService) { 
     this.form=this.formBuilder.group(
       {
     nombreHabilidad:['',],
@@ -25,7 +26,7 @@ export class EditHabilidadesComponent implements OnInit {
       console.log('del form' , this.form.value);
       console.log('registro habilidad nuevo a cargar' , data);
     alert("La habilidad fue añadida");
-    window.location.reload();
+    this.ruta.navigate (['/porfolio']);
   });
 }
 

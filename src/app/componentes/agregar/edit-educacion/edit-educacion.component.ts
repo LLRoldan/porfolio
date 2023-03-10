@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { EducacionService } from 'src/app/servicios/educacion.service';
 
 @Component({
@@ -12,7 +13,7 @@ import { EducacionService } from 'src/app/servicios/educacion.service';
 export class EditEducacionComponent implements OnInit {
   form:FormGroup;
  
-  constructor(private formBuilder: FormBuilder, private educacion: EducacionService) { 
+  constructor(private formBuilder: FormBuilder,private ruta: Router, private educacion: EducacionService) { 
       this.form=this.formBuilder.group(
        {
       titulo:['',],
@@ -35,7 +36,7 @@ export class EditEducacionComponent implements OnInit {
       console.log('del form' , this.form.value);
       console.log('regisdro educacion nuevo a cargar' , data);
     alert("La Educación fue añadida");
-    window.location.reload();
+    this.ruta.navigate (['/porfolio']);
   });
 }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HabilidadesService } from 'src/app/servicios/habilidades.service';
 import { TokenService } from 'src/app/servicios/token.service';
 
@@ -15,7 +15,7 @@ export class ModificarHabilidadesComponent implements OnInit {
  habilidadList: any;
 
  constructor( private activatedRoute:ActivatedRoute,
-   private formBuilder: FormBuilder,private datosHabil: HabilidadesService ,
+   private formBuilder: FormBuilder,private datosHabil: HabilidadesService ,private ruta: Router,
    private habilidadModificada: HabilidadesService, 
    private tokenService: TokenService) { 
 
@@ -57,7 +57,7 @@ onGuardarMod(): void{
     console.log('del form' , this.form.value);
     console.log('regisdro educacion modificado a cargar' , data);
   alert("La Educación fue modificada");
-  window.location.reload();
+  this.ruta.navigate (['/porfolio']);
 });
 }
 

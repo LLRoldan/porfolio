@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { TrabajosService } from 'src/app/servicios/trabajos.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { TrabajosService } from 'src/app/servicios/trabajos.service';
 })
 export class EditTrabajosComponent implements OnInit {
   form:FormGroup;
-  constructor(private formBuilder: FormBuilder, private trabajo: TrabajosService) { 
+  constructor(private formBuilder: FormBuilder,private ruta: Router, private trabajo: TrabajosService) { 
     this.form=this.formBuilder.group(
       {
     tituloproyecto:['',],
@@ -27,7 +28,7 @@ export class EditTrabajosComponent implements OnInit {
       console.log('del form' , this.form.value);
       console.log('registro trabajo nuevo a cargar' , data);
     alert("El nuevo trabajo fue añadido");
-    window.location.reload();
+    this.ruta.navigate (['/porfolio']);
   });
 }
 

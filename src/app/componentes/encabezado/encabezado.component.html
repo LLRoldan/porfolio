@@ -4,8 +4,8 @@
 </div>
 
 <article class="descripcion" style="padding-left: 16px">
-  <div class="titulo-parte">
-    <h1 id="nombreporfolio">
+  <div class="titulo-parte ">
+    <h1 class="titulo-div" id="nombreporfolio">
       {{ miPorfolioEnca?.nombre }} {{ miPorfolioEnca?.apellido }}
     </h1>
     <div class="row" *ngIf="isLogged">
@@ -33,9 +33,9 @@
                     
     <div hidden id="id">{{miPorfolioEnca?.id}}</div>
 
-  <h3>{{ miPorfolioEnca?.titulo }}</h3>
+  <h3 class="m-4">{{ miPorfolioEnca?.titulo }}</h3>
 
-  <div class="row">
+  <div class="row m-3">
     <div class="col-xs-1 col-md-4 col-sm-12">
       <ul class="list-group list-group-flush">
         <li class="list-group-item">{{ miPorfolioEnca?.expertoEnprimero }}</li>

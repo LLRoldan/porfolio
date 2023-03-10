@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 import { TokenService } from 'src/app/servicios/token.service';
 
@@ -17,7 +17,7 @@ export class ModificarExperienciaComponent implements OnInit {
 
  constructor( private activatedRoute:ActivatedRoute,
    private formBuilder: FormBuilder,private datosExper: ExperienciaService,
-   private experienciaModificada: ExperienciaService, 
+   private experienciaModificada: ExperienciaService, private ruta: Router,
    private tokenService: TokenService) { 
 
    this.cargarExpeporid();
@@ -65,7 +65,7 @@ export class ModificarExperienciaComponent implements OnInit {
      console.log('del form' , this.form2.value);
      console.log('regisdro experiencia modificado a cargar' , data);
    alert("La experiencia fue modificada");
-   window.location.reload();
+   this.ruta.navigate (['/porfolio']);
  });
 }
 

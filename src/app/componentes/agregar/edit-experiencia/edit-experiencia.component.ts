@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 })
 export class EditExperienciaComponent implements OnInit {
   form:FormGroup;
-  constructor(private formBuilder: FormBuilder,
+  constructor(private formBuilder: FormBuilder,private ruta: Router,
     private experiencia:ExperienciaService){
 
   this.form=this.formBuilder.group(
@@ -32,7 +33,7 @@ export class EditExperienciaComponent implements OnInit {
       console.log('del form' , this.form.value);
       console.log('registro experiencia nuevo a cargar' , data);
     alert("La experiencia fue añadida");
-    window.location.reload();
+    this.ruta.navigate (['/porfolio']);
   });
 }
 

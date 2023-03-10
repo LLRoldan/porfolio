@@ -1,3 +1,34 @@
+<div class=" text-bg-dark container-fluid">
+ 
+
+  <nav class="navbar navbar-brand  navbar-expand-md justify-content-center">
+    <div class="d-flex align-items-center flex-column flex-md-row flex-sm-row   ms-auto ">
+      <div class=" "> 
+          <a href="https://argentinaprograma.inti.gob.ar">
+              <img src="./assets/img/APLogo-20-20.png" alt="Logo yo programo" height="80">
+          </a>
+      </div>
+      <div >
+      <ul class="nav col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ">
+        <li><a routerLink="/" class="nav-link px-2 text-secondary">Home</a></li>
+        <li><a href="#exp"  class="nav-link px-2 text-white">Experiencia</a></li>
+        <li><a href="#edu" class="nav-link px-2 text-white">Educación</a></li>
+        <li><a href="#hab" class="nav-link px-2 text-white">Habilidades</a></li>
+        <li><a href="#pro" class="nav-link px-2 text-white">Proyectos</a></li>
+      </ul>
+     </div>
+      <div class=" navegador d-flex" >
+        <button type="button" *ngIf="!isLogged" class="btn btn-outline-light me-2" routerLink="/login">Login</button>
+        <button type="button" *ngIf="isLogged" class="btn btn-success me-2" (click)="onLogOut()"><i class="fas fa-door-open" ></i> Cerrar Sesión</button>
+        <button type="button" class="btn btn-warning">Registro</button>
+      </div>
+    </div>
+  </nav>
+
+</div>
+
+<!--
+
 <div class=" text-bg-dark">
  
 
@@ -28,4 +59,4 @@
     </nav>
   
   </div>
-  
+-->

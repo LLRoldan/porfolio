@@ -3,7 +3,8 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 import { Educacion } from 'src/app/modelos/educacion';
 import { EducacionService } from 'src/app/servicios/educacion.service';
 import { TokenService } from 'src/app/servicios/token.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-modificar-educacion',
@@ -18,6 +19,7 @@ export class ModificarEducacionComponent implements OnInit {
   constructor( private activatedRoute:ActivatedRoute,
     private formBuilder: FormBuilder,private datosEduc: EducacionService,
     private educacionModificada: EducacionService, 
+    private router: Router,
     private tokenService: TokenService) { 
 
 
@@ -65,7 +67,8 @@ export class ModificarEducacionComponent implements OnInit {
       console.log('del form' , this.form2.value);
       console.log('regisdro educacion modificado a cargar' , data);
     alert("La Educación fue modificada");
-    window.location.reload();
+    this.router.navigate(['/porfolio']);
+   // window.location.reload();
   });
 }
 

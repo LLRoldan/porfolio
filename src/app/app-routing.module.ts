@@ -33,7 +33,7 @@ const routes: Routes = [
   {path: 'edit-trabajos', component:EditTrabajosComponent },
   {path: 'modificar-trabajos/:idTrabajo', component:ModificarTrabajoComponent},
   
-  {path:'',redirectTo:'porfolio',pathMatch:'full'},
+  {path:'**',redirectTo:'porfolio',pathMatch:'full'},
   {path: 'home',component:PadrePorfolioComponent}
 ];
 

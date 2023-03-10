@@ -128,7 +128,7 @@ this.cargarPersonaporid();
   onCreate(): void {
     this.sPersona.save(this.form.value).subscribe(data => {
       alert("Persona Modificada");
-      window.location.reload();
+      this.router.navigate (['/porfolio']);
     });
   }
 

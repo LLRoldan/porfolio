@@ -19,7 +19,7 @@ export class EditEncabezadoComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
     private sPersona: PersonaService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private ruta: Router,
   ) {
     //Creamos el grupo de controles para el formulario 
     this.form = this.formBuilder.group({
@@ -120,7 +120,7 @@ export class EditEncabezadoComponent implements OnInit {
   onCreate(): void {
     this.sPersona.save(this.form.value).subscribe(data => {
       alert("Persona Añadida");
-      window.location.reload();
+      this.ruta.navigate (['/porfolio']);
     });
   }
 

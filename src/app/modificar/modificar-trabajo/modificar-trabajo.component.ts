@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TokenService } from 'src/app/servicios/token.service';
 import { TrabajosService } from 'src/app/servicios/trabajos.service';
 
@@ -15,7 +15,7 @@ export class ModificarTrabajoComponent implements OnInit {
  trabajosList: any;
 
   form:FormGroup;
-  constructor(private activatedRoute:ActivatedRoute,
+  constructor(private activatedRoute:ActivatedRoute,private ruta: Router,
     private formBuilder: FormBuilder, private datosTrab: TrabajosService,
     private trabajoModificada: TrabajosService,
     private tokenService: TokenService) { 
@@ -58,7 +58,7 @@ this.trabajoModificada.guardar(this.form.value).subscribe(data=>{
   console.log('del form' , this.form.value);
   console.log('regisdro trabajo modificado a cargar' , data);
 alert("El trabajo fué modificad");
-window.location.reload();
+this.ruta.navigate (['/porfolio']);
 });
 }
 

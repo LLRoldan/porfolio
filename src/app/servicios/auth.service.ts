@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class AuthService {
-   url = environment.baseUrl;
+  url = environment.baseUrl;
   currentUserSubject: BehaviorSubject<any>;
   constructor(private httpClient:HttpClient) {
 

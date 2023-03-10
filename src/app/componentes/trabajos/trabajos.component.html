@@ -9,9 +9,9 @@
 </div>
 
     
-    <div  class="row card-deck">
+    <div  class="row card-deck  justify-content-center">
       
-      <div *ngFor="let trabajos of trabajosList" class="col-md-6 col-xl-3 my-3">
+      <div *ngFor="let trabajos of trabajosList" class="d-flex justify-content-around col-md-6 col-xl-3 my-3">
         <div class="tarjetas">
           <div class="card" style="width: 18rem;">
           <img [src]="trabajos.linkcaptura" class="card-img-top" alt="...">
